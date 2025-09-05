@@ -121,6 +121,95 @@ def create_profile():
         return None
 
 
+def start_browser(user_id):
+    """Запускает браузер для профиля и возвращает WebDriver данные"""
+    api_url = "http://127.0.0.1:50325"
+    
+    # Данные для запуска браузера (API v2)
+    browser_data = {
+        "profile_id": user_id,
+        "headless": "0",  # 0 = обычный режим, 1 = headless
+        "last_opened_tabs": "1",  # Продолжить с последних открытых вкладок
+        "proxy_detection": "1",  # Открыть страницу проверки прокси
+        "password_filling": "0",  # Не заполнять пароли
+        "password_saving": "0",  # Не сохранять пароли
+        "cdp_mask": "1",  # Маскировать CDP детекцию
+        "delete_cache": "0"  # Не удалять кэш
+    }
+    
+    print(f"🚀 Запускаю браузер для профиля {user_id}...")
+    
+    try:
+        response = requests.post(f"{api_url}/api/v2/browser-profile/start", json=browser_data)
+        
+        if response.status_code == 200:
+            result = response.json()
+            
+            if result.get("code") == 0:
+                data = result.get("data", {})
+                ws_selenium = data.get("ws", {}).get("selenium")
+                ws_puppeteer = data.get("ws", {}).get("puppeteer")
+                debug_port = data.get("debug_port")
+                webdriver_path = data.get("webdriver")
+                
+                print(f"✅ Браузер успешно запущен!")
+                print(f"   Selenium URL: {ws_selenium}")
+                print(f"   Puppeteer URL: {ws_puppeteer}")
+                print(f"   Debug Port: {debug_port}")
+                print(f"   WebDriver Path: {webdriver_path}")
+                
+                return {
+                    "success": True,
+                    "ws_selenium": ws_selenium,
+                    "ws_puppeteer": ws_puppeteer,
+                    "debug_port": debug_port,
+                    "webdriver_path": webdriver_path,
+                    "user_id": user_id
+                }
+            else:
+                print(f"❌ Ошибка запуска браузера: {result.get('msg')}")
+                return {"success": False, "error": result.get('msg')}
+        else:
+            print(f"❌ HTTP ошибка: {response.status_code}")
+            return {"success": False, "error": f"HTTP {response.status_code}"}
+            
+    except Exception as e:
+        print(f"❌ Ошибка: {e}")
+        return {"success": False, "error": str(e)}
+
+
+def stop_browser(user_id):
+    """Останавливает браузер профиля"""
+    api_url = "http://127.0.0.1:50325"
+    
+    # Данные для остановки браузера (API v2)
+    browser_data = {
+        "profile_id": user_id
+    }
+    
+    print(f"🛑 Останавливаю браузер для профиля {user_id}...")
+    
+    try:
+        response = requests.post(f"{api_url}/api/v2/browser-profile/stop", json=browser_data)
+        
+        if response.status_code == 200:
+            result = response.json()
+            
+            if result.get("code") == 0:
+                print(f"✅ Браузер успешно остановлен!")
+                return True
+            else:
+                print(f"❌ Ошибка остановки браузера: {result.get('msg')}")
+                return False
+        else:
+            print(f"❌ HTTP ошибка: {response.status_code}")
+            return False
+            
+    except Exception as e:
+        print(f"❌ Ошибка: {e}")
+        return False
+
+
 def main():
     """Главная функция"""
     print("=== Создание профиля AdsPower ===\n")
@@ -129,9 +218,26 @@ def main():
     user_id = create_profile()
     
     if user_id:
-        print(f"\n🎉 Готово! Профиль создан с ID: {user_id}")
+        print(f"\n🎉 Профиль создан с ID: {user_id}")
+        
+        # Запускаем браузер
+        browser_info = start_browser(user_id)
+        
+        if browser_info["success"]:
+            print(f"\n🌐 Браузер готов для автоматизации!")
+            print(f"   WebDriver URL: {browser_info['ws_url']}")
+            print(f"\n💡 Теперь ваш бот может подключиться к браузеру!")
+            print(f"   Используйте WebDriver URL для Selenium/Playwright")
+            
+            # Спрашиваем пользователя
+            input("\n⏸️ Нажмите Enter чтобы остановить браузер...")
+            
+            # Останавливаем браузер
+            stop_browser(user_id)
+        else:
+            print(f"\n❌ Не удалось запустить браузер: {browser_info['error']}")
     else:
-        print(f"\n❌ Не удалось создать профиль")
+        print("\n❌ Не удалось создать профиль.")
     
     print("\n=== Скрипт завершен ===")
 
