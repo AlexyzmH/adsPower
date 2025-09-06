@@ -16,3 +16,714 @@
 [2025-09-05 20:02:40] [DEBUG] Saved whoop_error_page.png
 
 [2025-09-05 20:02:54] Используем данные: YkQXIhaarMartsinkevitch50lyUSYZO@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 20:26:47] Критическая ошибка: Message: session not created: cannot connect to chrome at 127.0.0.1:58102
+from session not created: This version of ChromeDriver only supports Chrome version 139
+Current browser version is 138.0.7204.50
+Stacktrace:
+	GetHandleVerifier [0x0xcaa8a3+63283]
+	GetHandleVerifier [0x0xcaa8e4+63348]
+	(No symbol) [0x0xae3e43]
+	(No symbol) [0x0xb1dfab]
+	(No symbol) [0x0xb1cfb9]
+	(No symbol) [0x0xb1330f]
+	(No symbol) [0x0xb13146]
+	(No symbol) [0x0xb5ce69]
+	(No symbol) [0x0xb5c77a]
+	(No symbol) [0x0xb51216]
+	(No symbol) [0x0xb20855]
+	(No symbol) [0x0xb216f4]
+	GetHandleVerifier [0x0xf1bb43+2623955]
+	GetHandleVerifier [0x0xf16daa+2604090]
+	GetHandleVerifier [0x0xcd069a+218410]
+	GetHandleVerifier [0x0xcc0ed8+154984]
+	GetHandleVerifier [0x0xcc742d+180925]
+	GetHandleVerifier [0x0xcb22b8+94536]
+	GetHandleVerifier [0x0xcb2442+94930]
+	GetHandleVerifier [0x0xc9d5ea+9338]
+	BaseThreadInitThunk [0x0x75427ba9+25]
+	RtlInitializeExceptionChain [0x0x777ac3ab+107]
+	RtlClearBits [0x0x777ac32f+191]
+
+
+[2025-09-05 20:28:47] Используем данные: XywSIharMartsinkevich15NZbqMMY@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:33:42] Используем данные: nlKfIharMartsinkevich34dwBnBMu@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:33:54] Используем данные: wYRSIhaarMartsinkevitch59LMsxshS@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 20:34:29] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 20:34:30] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 20:34:39] Используем данные: OgHeIiharMartsinkevic45odkJine@gmail.com - Iihar Martsinkevic
+
+[2025-09-05 20:34:58] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 20:34:58] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 20:35:39] Используем данные: UXGrIharMartsinkevich41NyCCyYC@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:36:14] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 20:36:14] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 20:49:11] Используем данные: mWEXIharMartsinkevich45lGVtASG@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:49:52] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 20:49:53] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_204952.html, whoop_locator_unavailable_start-with-peak_20250905_204952.png
+
+[2025-09-05 20:50:54] Используем данные: dmXtIharMartsinkevich47XyXYvKf@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:51:10] Используем данные: rponIhaarMartsinkevitch32fReCgoB@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 20:51:55] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 20:51:55] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_205155.html, whoop_locator_unavailable_start-with-peak_20250905_205155.png
+
+[2025-09-05 20:52:58] Используем данные: HKRGIharMartsinkevich44ckGDZJD@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:53:43] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 20:53:43] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_205343.html, whoop_locator_unavailable_start-with-peak_20250905_205343.png
+
+[2025-09-05 20:59:08] Используем данные: NgiaIharMartsinkevich43KoqnQoK@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 20:59:26] Используем данные: RKQZIhaarMartsinkevitch91yVzPnKN@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 20:59:56] [DEBUG] Saved artifacts: whoop_error_page_20250905_205956.html, whoop_error_page_20250905_205956.png
+
+[2025-09-05 20:59:56] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 20:59:57] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:00:05] Используем данные: dDhfIiharMartsinkevic68TNNsSHb@gmail.com - Iihar Martsinkevic
+
+[2025-09-05 21:00:15] [DEBUG] Saved artifacts: whoop_error_page_20250905_210015.html, whoop_error_page_20250905_210015.png
+
+[2025-09-05 21:00:15] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:00:15] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:02:19] Критическая ошибка: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff664210956]
+	(No symbol) [0x0x7ff664211f98]
+	(No symbol) [0x0x7ff664211ecf]
+	(No symbol) [0x0x7ff66420cba7]
+	(No symbol) [0x0x7ff66426cff5]
+	(No symbol) [0x0x7ff66426c8de]
+	(No symbol) [0x0x7ff66426e942]
+	(No symbol) [0x0x7ff66426e6b0]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 21:02:57] Критическая ошибка: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff664210956]
+	(No symbol) [0x0x7ff664211f98]
+	(No symbol) [0x0x7ff664211ecf]
+	(No symbol) [0x0x7ff66420cba7]
+	(No symbol) [0x0x7ff66426cff5]
+	(No symbol) [0x0x7ff66426c8de]
+	(No symbol) [0x0x7ff66426e942]
+	(No symbol) [0x0x7ff66426e6b0]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 21:07:14] Используем данные: afdXIharMartsinkevich31IxGDeQh@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:07:51] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:07:51] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:08:00] Используем данные: uFdZIhaarMartsinkevitch38eWiBucJ@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 21:12:21] Используем данные: UbKfIharMartsinkevich73lnzsAmF@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:12:34] Используем данные: zOUjIhaarMartsinkevitch99avjzlls@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 21:13:04] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:13:04] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:13:13] Используем данные: EIhlIiharMartsinkevic45qtrEheR@gmail.com - Iihar Martsinkevic
+
+[2025-09-05 21:19:22] Используем данные: xPOVIharMartsinkevich80QnSghTG@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:19:26] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.50)
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff6641b37a4]
+	(No symbol) [0x0x7ff664268676]
+	(No symbol) [0x0x7ff6642842b2]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 21:19:26] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_211926.html, whoop_locator_unavailable_start-with-peak_20250905_211926.png
+
+[2025-09-05 21:19:35] Используем данные: xrsaIhaarMartsinkevitch52FHzWmaX@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 21:20:23] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 21:20:23] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_212023.html, whoop_locator_unavailable_start-with-peak_20250905_212023.png
+
+[2025-09-05 21:20:23] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:20:23] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:20:32] Используем данные: YAKRIiharMartsinkevic10ynNYtmb@gmail.com - Iihar Martsinkevic
+
+[2025-09-05 21:20:48] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 21:20:49] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_212048.html, whoop_locator_unavailable_start-with-peak_20250905_212048.png
+
+[2025-09-05 21:20:49] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:20:49] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:25:19] Используем данные: pzLRIharMartsinkevich57kBGpvGa@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:26:01] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 21:26:01] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_212601.html, whoop_locator_unavailable_start-with-peak_20250905_212601.png
+
+[2025-09-05 21:26:01] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:26:01] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:26:10] Используем данные: iSqLIhaarMartsinkevitch67HzIfVnN@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 21:28:52] Используем данные: WxbaIharMartsinkevich43znCUGvF@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:28:56] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.50)
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff6641b37a4]
+	(No symbol) [0x0x7ff664268676]
+	(No symbol) [0x0x7ff6642842b2]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 21:28:56] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_212856.html, whoop_locator_unavailable_start-with-peak_20250905_212856.png
+
+[2025-09-05 21:29:05] Используем данные: OIdJIhaarMartsinkevitch73TosWkbi@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 21:29:44] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 21:29:44] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_212944.html, whoop_locator_unavailable_start-with-peak_20250905_212944.png
+
+[2025-09-05 21:29:44] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:29:44] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:29:53] Используем данные: DDtkIiharMartsinkevic34IcVQwOk@gmail.com - Iihar Martsinkevic
+
+[2025-09-05 21:30:55] [DEBUG] Locator not clickable start-with-peak via ('xpath', "//button[@data-testid='membership-PEAK-card-cta']"): Message: 
+
+
+[2025-09-05 21:30:56] [DEBUG] Saved artifacts: whoop_locator_unavailable_start-with-peak_20250905_213055.html, whoop_locator_unavailable_start-with-peak_20250905_213055.png
+
+[2025-09-05 21:30:56] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:30:56] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:31:10] Используем данные: tZLSIharMartsinkevich44CCJwbMc@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:32:44] Используем данные: vkXdIharMartsinkevich19ckigwmz@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 21:33:34] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff6642386a3]
+	(No symbol) [0x0x7ff66423887c]
+	(No symbol) [0x0x7ff664287bc7]
+	(No symbol) [0x0x7ff6642617cf]
+	(No symbol) [0x0x7ff66422aedc]
+	(No symbol) [0x0x7ff66428491c]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 21:33:35] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250905_213334.html, whoop_locator_unavailable_continue-button_20250905_213334.png
+
+[2025-09-05 21:33:35] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 21:33:35] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 21:33:44] Используем данные: qFNwIhaarMartsinkevitch88dtwSMKA@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-05 22:00:34] Используем данные: rqXAIharMartsinkevich65jzhIWSm@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 22:01:20] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff6642386a3]
+	(No symbol) [0x0x7ff66423887c]
+	(No symbol) [0x0x7ff664287bc7]
+	(No symbol) [0x0x7ff6642617cf]
+	(No symbol) [0x0x7ff66422aedc]
+	(No symbol) [0x0x7ff66428491c]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 22:01:20] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250905_220120.html, whoop_locator_unavailable_continue-button_20250905_220120.png
+
+[2025-09-05 22:01:20] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 22:01:20] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 22:04:20] Используем данные: moMZIharMartsinkevich94fOWNWmi@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 22:05:10] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff663ea0935]
+	(No symbol) [0x0x7ff663ea08f0]
+	(No symbol) [0x0x7ff6641e15da]
+	(No symbol) [0x0x7ff6642386a3]
+	(No symbol) [0x0x7ff66423887c]
+	(No symbol) [0x0x7ff664287bc7]
+	(No symbol) [0x0x7ff6642617cf]
+	(No symbol) [0x0x7ff66422aedc]
+	(No symbol) [0x0x7ff66428491c]
+	(No symbol) [0x0x7ff664261583]
+	(No symbol) [0x0x7ff66422a29e]
+	(No symbol) [0x0x7ff6642291d8]
+	(No symbol) [0x0x7ff664229f9a]
+	GetHandleVerifier [0x0x7ff664810436+4602630]
+	(No symbol) [0x0x7ff663e84981]
+	GetHandleVerifier [0x0x7ff664631964+2641972]
+	GetHandleVerifier [0x0x7ff6647b94ca+4246426]
+	GetHandleVerifier [0x0x7ff66449248a+940890]
+	(No symbol) [0x0x7ff664052d7e]
+	(No symbol) [0x0x7ff664052c84]
+	(No symbol) [0x0x7ff663ea6649]
+	(No symbol) [0x0x7ff663f459c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-05 22:05:10] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250905_220510.html, whoop_locator_unavailable_continue-button_20250905_220510.png
+
+[2025-09-05 22:05:10] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-05 22:05:10] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-05 22:07:59] Используем данные: kxruIharMartsinkevich82nmlaclJ@gmail.com - Ihar Martsinkevich
+
+[2025-09-05 22:09:02] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-05 22:09:20] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-05 22:09:32] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-05 22:09:43] Email: kxruIharMartsinkevich82nmlaclJ@gmail.com
+
+[2025-09-05 22:09:48] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-05 22:10:29] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=true
+
+[2025-09-05 22:10:38] [DEBUG] Try click next-shipping-address via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=true
+
+[2025-09-06 12:47:21] Используем данные: tAveIharMartsinkevich25SKYIwJY@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 12:48:16] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 12:48:28] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 12:48:41] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 12:48:51] Email: tAveIharMartsinkevich25SKYIwJY@gmail.com
+
+[2025-09-06 12:48:56] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 12:49:37] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=true
+
+[2025-09-06 12:50:41] Используем данные: NYjNIharMartsinkevich27wFmWYmj@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 12:51:02] Используем данные: BtvNIhaarMartsinkevitch60atUflkZ@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-06 12:52:05] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 12:52:17] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 12:52:30] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 12:52:40] Email: BtvNIhaarMartsinkevitch60atUflkZ@gmail.com
+
+[2025-09-06 12:52:46] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 12:53:27] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=true
+
+[2025-09-06 12:56:47] Используем данные: tXCZIharMartsinkevich77DmOSWpD@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 12:57:50] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 12:58:07] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 12:58:19] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 12:58:29] Email: tXCZIharMartsinkevich77DmOSWpD@gmail.com
+
+[2025-09-06 12:58:35] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 12:59:05] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=true
+
+[2025-09-06 13:01:13] Используем данные: TwLZIharMartsinkevich26NfIjOCu@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 13:02:09] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 13:02:22] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 13:02:34] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 13:02:44] Email: TwLZIharMartsinkevich26NfIjOCu@gmail.com
+
+[2025-09-06 13:02:50] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 13:03:31] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=true
+
+[2025-09-06 13:03:40] [DEBUG] Locator not clickable next-shipping-address via ('xpath', "//button[@data-testid='next-button-shipping-address']"): Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.50)
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff771527888]
+	(No symbol) [0x0x7ff771552ae7]
+	(No symbol) [0x0x7ff7715c88d0]
+	(No symbol) [0x0x7ff7715e42b2]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 13:03:40] [DEBUG] Saved artifacts: whoop_locator_unavailable_next-shipping-address_20250906_130340.html, whoop_locator_unavailable_next-shipping-address_20250906_130340.png
+
+[2025-09-06 13:03:40] [DEBUG] Locator not clickable next-shipping-address via ('xpath', "//button[@type='submit' and .//span[contains(., 'Next')]]"): Message: invalid session id
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715413fc]
+	(No symbol) [0x0x7ff7715884bc]
+	(No symbol) [0x0x7ff7715c1672]
+	(No symbol) [0x0x7ff77158764f]
+	(No symbol) [0x0x7ff7715bc4f7]
+	(No symbol) [0x0x7ff7715bb9f6]
+	(No symbol) [0x0x7ff7715069b9]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff77150572d]
+	GetHandleVerifier [0x0x7ff771b2ac28+4317944]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 13:03:40] [DEBUG] Saved artifacts: whoop_locator_unavailable_next-shipping-address_20250906_130340.html, whoop_locator_unavailable_next-shipping-address_20250906_130340.png
+
+[2025-09-06 13:03:40] [DEBUG] Locator not clickable next-shipping-address via ('xpath', "//button[contains(., 'Next')]"): Message: invalid session id
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715413fc]
+	(No symbol) [0x0x7ff7715884bc]
+	(No symbol) [0x0x7ff7715c1672]
+	(No symbol) [0x0x7ff77158764f]
+	(No symbol) [0x0x7ff7715bc4f7]
+	(No symbol) [0x0x7ff7715bb9f6]
+	(No symbol) [0x0x7ff7715069b9]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff77150572d]
+	GetHandleVerifier [0x0x7ff771b2ac28+4317944]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 13:03:40] [DEBUG] Saved artifacts: whoop_locator_unavailable_next-shipping-address_20250906_130340.html, whoop_locator_unavailable_next-shipping-address_20250906_130340.png
+
+[2025-09-06 13:04:55] Используем данные: ZXEoIharMartsinkevich31BQIdcHG@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 13:06:01] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 13:06:19] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 13:06:31] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 13:06:42] Email: ZXEoIharMartsinkevich31BQIdcHG@gmail.com
+
+[2025-09-06 13:06:47] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 13:07:08] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 13:07:20] [DEBUG] Locator not clickable shipping-method-button via ('xpath', "//button[@data-testid='next-button-shipping-method']"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 13:07:20] [DEBUG] Saved artifacts: whoop_locator_unavailable_shipping-method-button_20250906_130720.html, whoop_locator_unavailable_shipping-method-button_20250906_130720.png
+
+[2025-09-06 13:07:22] [DEBUG] Try click shipping-method-button via ('xpath', "//button[@data-testid='confirm-address']"): displayed=True enabled=True attrs=id= name= data-testid=confirm-address aria-disabled=None disabled=None
+
+[2025-09-06 13:07:33] Не удалось найти iframe с полями карты
+
+[2025-09-06 13:07:42] Используем данные: olzRIhaarMartsinkevitch37ePuFTuo@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-06 13:16:42] Используем данные: EOWyIharMartsinkevich89TSPRaRn@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 13:17:35] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 13:17:35] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_131735.html, whoop_locator_unavailable_continue-button_20250906_131735.png
+
+[2025-09-06 13:17:35] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 13:17:35] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 13:17:44] Используем данные: LtrwIhaarMartsinkevitch23TZnFyTl@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-06 13:18:44] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 13:18:56] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 13:19:08] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 13:19:19] Email: LtrwIhaarMartsinkevitch23TZnFyTl@gmail.com
+
+[2025-09-06 13:19:24] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 13:19:45] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 13:20:10] Не удалось найти iframe с полями карты
+
+[2025-09-06 13:21:21] Критическая ошибка: Message: session not created: cannot connect to chrome at 127.0.0.1:64815
+from chrome not reachable
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715413fc]
+	(No symbol) [0x0x7ff77152ca11]
+	(No symbol) [0x0x7ff771584be2]
+	(No symbol) [0x0x7ff771579d35]
+	(No symbol) [0x0x7ff7715cef54]
+	(No symbol) [0x0x7ff7715ce6b0]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 13:25:33] Используем данные: WFAeIharMartsinkevich63vdrWCmp@gmail.com - Ihar Martsinkevich
+
+[2025-09-06 13:25:53] Используем данные: ssbuIhaarMartsinkevitch75rMcVLqV@gmail.com - Ihaar Martsinkevitch
+
+[2025-09-06 13:26:51] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 13:27:05] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 13:27:17] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 13:27:27] Email: ssbuIhaarMartsinkevitch75rMcVLqV@gmail.com
+
+[2025-09-06 13:27:33] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 13:27:53] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 13:28:18] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 13:28:18] Кнопка Place Order нажата
+
+[2025-09-06 13:28:25] [UNSUCCESSFUL] Ошибка при оплате: Phone number contains invalid characters., Карта: 5573770013046960
+
+[2025-09-06 13:28:36] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573770013046960

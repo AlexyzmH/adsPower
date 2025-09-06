@@ -47,10 +47,14 @@ def main():
         # Импортируем и запускаем бота
         from bot_example import run_flow
         
-        # Сохраняем debug port в переменную окружения для бота
+        # Сохраняем debug port и webdriver path в переменные окружения для бота
         import os
         os.environ['ADSPOWER_DEBUG_PORT'] = str(browser_info['debug_port'])
+        if 'webdriver_path' in browser_info:
+            os.environ['ADSPOWER_WEBDRIVER_PATH'] = browser_info['webdriver_path']
         print(f"🔧 Установлен debug port: {browser_info['debug_port']}")
+        if 'webdriver_path' in browser_info:
+            print(f"🔧 Установлен webdriver path: {browser_info['webdriver_path']}")
         
         # Запускаем бота (можно указать конкретную карту: --card-index 0)
         run_flow()
