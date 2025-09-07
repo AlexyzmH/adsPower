@@ -727,3 +727,985 @@ Stacktrace:
 [2025-09-06 13:28:25] [UNSUCCESSFUL] Ошибка при оплате: Phone number contains invalid characters., Карта: 5573770013046960
 
 [2025-09-06 13:28:36] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573770013046960
+
+[2025-09-06 15:02:17] Используем данные: johndoe00@example.com - John Doe
+
+[2025-09-06 15:05:57] Используем данные: johndoe00@example.com - John Doe
+
+[2025-09-06 15:10:29] Используем данные: johndoe00@example.com - John Doe
+
+[2025-09-06 15:12:47] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 15:12:48] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 15:12:56] Используем данные: johnnydoer01@example.com - Johnny Doer
+
+[2025-09-06 15:13:44] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 15:13:44] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_151344.html, whoop_locator_unavailable_continue-button_20250906_151344.png
+
+[2025-09-06 15:13:44] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 15:13:44] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 15:22:31] Используем данные: johndoe00@example.com - John Doe
+
+[2025-09-06 15:23:02] Используем данные: johnnydoer01@example.com - Johnny Doer
+
+[2025-09-06 15:25:30] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 15:25:30] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 15:25:39] Используем данные: jonathandoe-smith02@example.com - Jonathan Doe-Smith
+
+[2025-09-06 15:26:34] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 15:26:55] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 15:27:12] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 15:27:27] Email: jonathandoe-smith02@example.com
+
+[2025-09-06 15:27:32] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=False attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=true
+
+[2025-09-06 15:27:58] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 15:27:58] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 15:30:32] Используем данные: johndoe00@example.com - John Doe
+
+[2025-09-06 15:33:07] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 15:33:29] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 15:33:46] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 15:34:01] Email: johndoe00@example.com
+
+[2025-09-06 15:34:07] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 15:34:31] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 15:35:35] Ошибка при вводе данных карты: 'exp_date'
+
+[2025-09-06 15:35:37] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 15:35:37] Кнопка Place Order нажата
+
+[2025-09-06 15:42:34] Используем данные: JMtaJohnDoe54ktEIxzx@gmail.com - John Doe
+
+[2025-09-06 15:44:48] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 15:44:48] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 15:44:57] Используем данные: oYvIJohnnyDoer75zYdSOUt@gmail.com - Johnny Doer
+
+[2025-09-06 15:45:55] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 15:46:13] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 15:46:30] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 15:46:46] Email: oYvIJohnnyDoer75zYdSOUt@gmail.com
+
+[2025-09-06 15:46:51] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 15:47:17] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 15:48:22] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 15:48:22] Кнопка Place Order нажата
+
+[2025-09-06 15:48:42] [UNSUCCESSFUL] Ошибка при оплате: Please enter a valid payment method and try again., Карта: 4111111111111111
+
+[2025-09-06 15:48:53] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 4111111111111111
+
+[2025-09-06 15:49:01] Используем данные: oehTJonathanDoe-Smith77dMYsmSh@gmail.com - Jonathan Doe-Smith
+
+[2025-09-06 15:50:23] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 15:50:41] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 15:50:58] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 15:51:13] Email: oehTJonathanDoe-Smith77dMYsmSh@gmail.com
+
+[2025-09-06 15:51:19] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 15:51:44] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 15:52:50] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 15:52:50] Кнопка Place Order нажата
+
+[2025-09-06 15:53:10] [UNSUCCESSFUL] Ошибка при оплате: Please enter a valid payment method and try again., Карта: 4111111111111111
+
+[2025-09-06 15:53:20] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 4111111111111111
+
+[2025-09-06 16:00:01] Используем данные: NFTbJohnDoe61SLYv@gmail.com - John Doe
+
+[2025-09-06 16:02:11] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 16:02:33] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 16:02:50] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 16:03:07] Email: NFTbJohnDoe61SLYv@gmail.com
+
+[2025-09-06 16:03:12] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 16:03:38] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 16:04:43] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 16:04:43] Кнопка Place Order нажата
+
+[2025-09-06 16:05:03] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1406 2347
+
+[2025-09-06 16:05:13] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1406 2347
+
+[2025-09-06 16:05:22] Используем данные: uaYxJohnnyDoer56FqqU@gmail.com - Johnny Doer
+
+[2025-09-06 16:06:47] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 16:07:04] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 16:07:21] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 16:07:36] Email: uaYxJohnnyDoer56FqqU@gmail.com
+
+[2025-09-06 16:07:42] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 16:08:07] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 16:09:12] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 16:09:13] Кнопка Place Order нажата
+
+[2025-09-06 16:09:33] [UNSUCCESSFUL] Ошибка при оплате: An error occurred. Please try again and contact support if this issue persists., Карта: 5573 7700 1406 2347
+
+[2025-09-06 16:09:43] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1406 2347
+
+[2025-09-06 16:09:52] Используем данные: umJaJonathanDoe-Smith86SoSo@gmail.com - Jonathan Doe-Smith
+
+[2025-09-06 16:13:40] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:13:40] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:14:36] Используем данные: vTYgJaneSmith41hmuM@gmail.com - Jane Smith
+
+[2025-09-06 16:16:33] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 16:16:33] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_161633.html, whoop_locator_unavailable_continue-button_20250906_161633.png
+
+[2025-09-06 16:16:33] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:16:33] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:16:42] Используем данные: ljYlJanetSmithson46tIZt@gmail.com - Janet Smithson
+
+[2025-09-06 16:18:49] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 16:18:49] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_161849.html, whoop_locator_unavailable_continue-button_20250906_161849.png
+
+[2025-09-06 16:18:49] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:18:50] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:23:42] Используем данные: tdYPJaneSmith30fmzk@gmail.com - Jane Smith
+
+[2025-09-06 16:24:22] Используем данные: dGLPJanetSmithson99vGyO@gmail.com - Janet Smithson
+
+[2025-09-06 16:26:58] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 16:26:58] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_162658.html, whoop_locator_unavailable_continue-button_20250906_162658.png
+
+[2025-09-06 16:26:58] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:26:58] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:27:07] Используем данные: AMOZJaniceSmith-Jones59sczV@gmail.com - Janice Smith-Jones
+
+[2025-09-06 16:35:40] Используем данные: knleJaneSmith47xlzl@gmail.com - Jane Smith
+
+[2025-09-06 16:40:40] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:40:40] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:40:49] Используем данные: vYyuJanetSmithson53aunP@gmail.com - Janet Smithson
+
+[2025-09-06 16:42:34] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 16:42:34] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_164234.html, whoop_locator_unavailable_continue-button_20250906_164234.png
+
+[2025-09-06 16:42:34] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:42:34] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:42:43] Используем данные: PnqNJaniceSmith-Jones61MKdu@gmail.com - Janice Smith-Jones
+
+[2025-09-06 16:45:33] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:45:33] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:46:44] Используем данные: vPLWAhmedAl-Rashid79nczs@gmail.com - Ahmed Al-Rashid
+
+[2025-09-06 16:47:14] Используем данные: moZeAhmadRashid38zSEJ@gmail.com - Ahmad Rashid
+
+[2025-09-06 16:49:28] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 16:49:28] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_164928.html, whoop_locator_unavailable_continue-button_20250906_164928.png
+
+[2025-09-06 16:49:28] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 16:49:28] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 16:49:37] Используем данные: VWkJAhmedAl-Rashid18cBiy@gmail.com - Ahmed Al-Rashid
+
+[2025-09-06 16:51:46] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 16:52:04] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 16:52:21] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 16:52:36] Email: VWkJAhmedAl-Rashid18cBiy@gmail.com
+
+[2025-09-06 16:52:42] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 16:53:07] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 16:54:13] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 16:54:13] Кнопка Place Order нажата
+
+[2025-09-06 16:54:33] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1401 0478
+
+[2025-09-06 16:54:43] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1401 0478
+
+[2025-09-06 17:34:01] Используем данные: nFNrJohnDoe33ejdy@gmail.com - John Doe
+
+[2025-09-06 17:39:01] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 17:39:01] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 17:39:10] Используем данные: gSsgJohnnyDoer51RFrr@gmail.com - Johnny Doer
+
+[2025-09-06 17:40:27] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 17:40:52] [DEBUG] Locator not clickable trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 17:40:53] [DEBUG] Saved artifacts: whoop_locator_unavailable_trial-membership_20250906_174052.html, whoop_locator_unavailable_trial-membership_20250906_174052.png
+
+[2025-09-06 17:40:53] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 17:40:53] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 17:41:01] Используем данные: PJAhJonathanDoe-Smith34FoCg@gmail.com - Jonathan Doe-Smith
+
+[2025-09-06 17:42:37] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 17:42:54] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 17:43:11] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 17:43:26] Email: PJAhJonathanDoe-Smith34FoCg@gmail.com
+
+[2025-09-06 17:43:32] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 17:43:57] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 17:45:00] Не удалось найти iframe с полями карты
+
+[2025-09-06 17:45:09] Используем данные: FwcLJonDoe-Johnson91tUDy@gmail.com - Jon Doe-Johnson
+
+[2025-09-06 17:46:53] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 17:47:10] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 17:47:27] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 17:47:43] Email: FwcLJonDoe-Johnson91tUDy@gmail.com
+
+[2025-09-06 17:47:48] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 17:48:14] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 17:48:36] [DEBUG] Try click next-shipping-address via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 17:49:13] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 17:49:13] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 17:49:22] Используем данные: uTYvJohnny-BoyDoe-Williams20RdxV@gmail.com - Johnny-Boy Doe-Williams
+
+[2025-09-06 17:50:53] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 17:51:19] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 17:51:36] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 17:51:52] Email: uTYvJohnny-BoyDoe-Williams20RdxV@gmail.com
+
+[2025-09-06 17:51:57] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 17:52:22] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 17:53:27] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 17:53:27] Кнопка Place Order нажата
+
+[2025-09-06 17:53:47] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1401 2219
+
+[2025-09-06 17:53:58] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1401 2219
+
+[2025-09-06 17:54:47] Используем данные: gotEJaneSmith50ttgP@gmail.com - Jane Smith
+
+[2025-09-06 17:56:21] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 17:56:47] [DEBUG] Locator not clickable trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 17:56:47] [DEBUG] Saved artifacts: whoop_locator_unavailable_trial-membership_20250906_175647.html, whoop_locator_unavailable_trial-membership_20250906_175647.png
+
+[2025-09-06 17:56:47] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 17:56:47] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 17:56:56] Используем данные: xWUtJanetSmithson73tPJn@gmail.com - Janet Smithson
+
+[2025-09-06 17:58:29] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 17:58:47] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 17:59:04] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 17:59:20] Email: xWUtJanetSmithson73tPJn@gmail.com
+
+[2025-09-06 17:59:25] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 17:59:51] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 18:00:56] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 18:00:56] Кнопка Place Order нажата
+
+[2025-09-06 18:01:16] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1403 0013
+
+[2025-09-06 18:01:26] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1403 0013
+
+[2025-09-06 18:01:35] Используем данные: rFsJJaniceSmith-Jones80vKbP@gmail.com - Janice Smith-Jones
+
+[2025-09-06 18:02:56] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:02:56] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:03:05] Используем данные: yshbJanSmith-Brown97Lljs@gmail.com - Jan Smith-Brown
+
+[2025-09-06 18:04:20] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:04:20] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:04:29] Используем данные: ROaaJanelleSmith-Davis56cjxj@gmail.com - Janelle Smith-Davis
+
+[2025-09-06 18:05:38] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:05:38] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:06:27] Используем данные: GLhiAhmedAl-Rashid36qgaW@gmail.com - Ahmed Al-Rashid
+
+[2025-09-06 18:06:56] Используем данные: DwthAhmadRashid66Syhr@gmail.com - Ahmad Rashid
+
+[2025-09-06 18:08:03] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 18:08:20] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 18:08:37] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 18:08:52] Email: DwthAhmadRashid66Syhr@gmail.com
+
+[2025-09-06 18:08:58] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 18:09:23] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 18:10:29] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 18:10:29] Кнопка Place Order нажата
+
+[2025-09-06 18:10:49] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1408 7484
+
+[2025-09-06 18:10:59] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1408 7484
+
+[2025-09-06 18:11:08] Используем данные: iIROAhmedAl-Rashid65OMWs@gmail.com - Ahmed Al-Rashid
+
+[2025-09-06 18:12:48] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 18:13:05] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 18:13:22] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 18:13:37] Email: iIROAhmedAl-Rashid65OMWs@gmail.com
+
+[2025-09-06 18:13:43] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 18:14:08] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 18:15:13] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 18:15:13] Кнопка Place Order нажата
+
+[2025-09-06 18:15:33] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1408 7484
+
+[2025-09-06 18:15:43] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1408 7484
+
+[2025-09-06 18:15:52] Используем данные: hguSAhmadRashid83rSZD@gmail.com - Ahmad Rashid
+
+[2025-09-06 18:17:57] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 18:18:22] [DEBUG] Locator not clickable trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 18:18:22] [DEBUG] Saved artifacts: whoop_locator_unavailable_trial-membership_20250906_181822.html, whoop_locator_unavailable_trial-membership_20250906_181822.png
+
+[2025-09-06 18:18:22] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:18:22] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:18:31] Используем данные: kFtnAhmedAl-Rashid33eZan@gmail.com - Ahmed Al-Rashid
+
+[2025-09-06 18:20:24] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 18:20:41] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 18:20:58] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 18:21:14] Email: kFtnAhmedAl-Rashid33eZan@gmail.com
+
+[2025-09-06 18:21:19] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 18:21:45] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 18:22:50] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 18:22:50] Кнопка Place Order нажата
+
+[2025-09-06 18:23:10] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1408 7484
+
+[2025-09-06 18:23:20] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1408 7484
+
+[2025-09-06 18:25:54] Используем данные: BokkSarahJohnson42HEjH@gmail.com - Sarah Johnson
+
+[2025-09-06 18:29:42] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:29:43] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:29:51] Используем данные: PfGpSaraJohns77zgVL@gmail.com - Sara Johns
+
+[2025-09-06 18:32:25] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:32:25] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:32:33] Используем данные: AnJlSarinaJohnson-Brown83hwxW@gmail.com - Sarina Johnson-Brown
+
+[2025-09-06 18:34:23] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff771200935]
+	(No symbol) [0x0x7ff7712008f0]
+	(No symbol) [0x0x7ff7715415da]
+	(No symbol) [0x0x7ff7715986a3]
+	(No symbol) [0x0x7ff77159887c]
+	(No symbol) [0x0x7ff7715e7bc7]
+	(No symbol) [0x0x7ff7715c17cf]
+	(No symbol) [0x0x7ff77158aedc]
+	(No symbol) [0x0x7ff7715e491c]
+	(No symbol) [0x0x7ff7715c1583]
+	(No symbol) [0x0x7ff77158a29e]
+	(No symbol) [0x0x7ff7715891d8]
+	(No symbol) [0x0x7ff771589f9a]
+	GetHandleVerifier [0x0x7ff771b70436+4602630]
+	(No symbol) [0x0x7ff7711e4981]
+	GetHandleVerifier [0x0x7ff771991964+2641972]
+	GetHandleVerifier [0x0x7ff771b194ca+4246426]
+	GetHandleVerifier [0x0x7ff7717f248a+940890]
+	(No symbol) [0x0x7ff7713b2d7e]
+	(No symbol) [0x0x7ff7713b2c84]
+	(No symbol) [0x0x7ff771206649]
+	(No symbol) [0x0x7ff7712a59c8]
+	BaseThreadInitThunk [0x0x7ffc8f78259d+29]
+	RtlUserThreadStart [0x0x7ffc905aaf78+40]
+
+
+[2025-09-06 18:34:23] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250906_183423.html, whoop_locator_unavailable_continue-button_20250906_183423.png
+
+[2025-09-06 18:34:23] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:34:23] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 18:34:32] Используем данные: QRSkSariJohnson-Taylor24xtMc@gmail.com - Sari Johnson-Taylor
+
+[2025-09-06 18:36:38] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 18:36:55] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 18:37:12] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 18:37:27] Email: QRSkSariJohnson-Taylor24xtMc@gmail.com
+
+[2025-09-06 18:37:33] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 18:37:58] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 18:39:04] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 18:39:04] Кнопка Place Order нажата
+
+[2025-09-06 18:39:24] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1401 0908
+
+[2025-09-06 18:39:34] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1401 0908
+
+[2025-09-06 18:39:43] Используем данные: WJgYSarinaJohnson-Wilson70AKHp@gmail.com - Sarina Johnson-Wilson
+
+[2025-09-06 18:41:11] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-06 18:41:11] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-06 19:44:53] Используем данные: vRWHDavidBrown57FwHw@gmail.com - David Brown
+
+[2025-09-06 19:46:32] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 19:46:50] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 19:47:07] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 19:47:22] Email: vRWHDavidBrown57FwHw@gmail.com
+
+[2025-09-06 19:47:28] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 19:47:53] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 19:48:58] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 19:48:59] Кнопка Place Order нажата
+
+[2025-09-06 19:49:19] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1513 8310
+
+[2025-09-06 19:49:29] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1513 8310
+
+[2025-09-06 19:49:38] Используем данные: WOEnDaveBrowne86DVxd@gmail.com - Dave Browne
+
+[2025-09-06 19:51:21] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 19:51:38] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 19:51:55] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 19:52:10] Email: WOEnDaveBrowne86DVxd@gmail.com
+
+[2025-09-06 19:52:16] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 19:52:41] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 19:53:47] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 19:53:47] Кнопка Place Order нажата
+
+[2025-09-06 19:54:07] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1513 8310
+
+[2025-09-06 19:54:17] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1513 8310
+
+[2025-09-06 19:54:26] Используем данные: kWEKDavyBrown-Smith67BmMa@gmail.com - Davy Brown-Smith
+
+[2025-09-06 19:55:42] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 19:55:59] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 19:56:16] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 19:56:31] Email: kWEKDavyBrown-Smith67BmMa@gmail.com
+
+[2025-09-06 19:56:37] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 19:57:02] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 19:58:07] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 19:58:08] Кнопка Place Order нажата
+
+[2025-09-06 19:58:28] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1513 8310
+
+[2025-09-06 19:58:38] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1513 8310
+
+[2025-09-06 19:58:47] Используем данные: PEzQDaviBrown-Johnson88diGr@gmail.com - Davi Brown-Johnson
+
+[2025-09-06 20:00:24] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:00:41] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 20:00:59] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 20:01:14] Email: PEzQDaviBrown-Johnson88diGr@gmail.com
+
+[2025-09-06 20:01:19] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 20:01:45] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 20:02:50] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 20:02:50] Кнопка Place Order нажата
+
+[2025-09-06 20:03:10] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1513 8310
+
+[2025-09-06 20:03:21] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1513 8310
+
+[2025-09-06 20:03:29] Используем данные: aqDiDavidsonBrown-Williams33XsXc@gmail.com - Davidson Brown-Williams
+
+[2025-09-06 20:04:58] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:05:15] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 20:05:33] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 20:05:48] Email: aqDiDavidsonBrown-Williams33XsXc@gmail.com
+
+[2025-09-06 20:05:53] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 20:06:19] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 20:07:24] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 20:07:25] Кнопка Place Order нажата
+
+[2025-09-06 20:07:45] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1513 8310
+
+[2025-09-06 20:10:46] Используем данные: LyaIEmmaDavis46SRKW@gmail.com - Emma Davis
+
+[2025-09-06 20:11:15] Используем данные: RrEaEmilyDavies42SGdm@gmail.com - Emily Davies
+
+[2025-09-06 20:14:12] Используем данные: bjLgEmmaDavis63EFbI@gmail.com - Emma Davis
+
+[2025-09-06 20:15:32] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:15:51] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 20:16:08] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 20:16:24] Email: bjLgEmmaDavis63EFbI@gmail.com
+
+[2025-09-06 20:16:29] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 20:16:55] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 20:18:00] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 20:18:00] Кнопка Place Order нажата
+
+[2025-09-06 20:18:20] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:18:30] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:18:39] Используем данные: HIZdEmilyDavies37ZlTC@gmail.com - Emily Davies
+
+[2025-09-06 20:20:10] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:20:27] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 20:20:44] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 20:21:00] Email: HIZdEmilyDavies37ZlTC@gmail.com
+
+[2025-09-06 20:21:05] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 20:21:31] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 20:22:36] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 20:22:36] Кнопка Place Order нажата
+
+[2025-09-06 20:22:56] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:23:07] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:23:15] Используем данные: ncZwEmiliaDavis-Jones75lqLS@gmail.com - Emilia Davis-Jones
+
+[2025-09-06 20:24:57] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:25:14] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 20:25:31] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 20:25:46] Email: ncZwEmiliaDavis-Jones75lqLS@gmail.com
+
+[2025-09-06 20:25:52] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 20:26:17] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 20:27:23] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 20:27:23] Кнопка Place Order нажата
+
+[2025-09-06 20:27:43] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:27:53] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:28:02] Используем данные: OIYMEmmyDavis-Brown48lGTd@gmail.com - Emmy Davis-Brown
+
+[2025-09-06 20:29:46] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:30:03] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-06 20:30:20] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-06 20:30:35] Email: OIYMEmmyDavis-Brown48lGTd@gmail.com
+
+[2025-09-06 20:30:41] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-06 20:31:06] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-06 20:32:12] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-06 20:32:12] Кнопка Place Order нажата
+
+[2025-09-06 20:32:32] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:32:42] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573 7700 1514 9051
+
+[2025-09-06 20:32:51] Используем данные: kLmWEmma-LeeDavis-Taylor14IOxP@gmail.com - Emma-Lee Davis-Taylor
+
+[2025-09-06 20:33:36] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-06 20:35:00] Используем данные: wQLXJamesWilson98VIHq@gmail.com - James Wilson
+
+[2025-09-06 20:35:29] Используем данные: JbGJJimWills92zUzO@gmail.com - Jim Wills
+
+[2025-09-06 20:36:38] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None

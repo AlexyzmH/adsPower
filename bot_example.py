@@ -94,53 +94,7 @@ def get_adspower_webdriver_path():
 	return None
 
 
-# Данные пользователя - разделены по массивам для удобства
-# Для каждой карты 3 попытки с разными вариантами имени
-NAMES = [
-	["Ihar", "Ihaar", "Iihar"],  # Различные варианты написания Ihar
-	["Ihar", "Ihhar", "Ihaar"],
-	["Iihar", "Ihar", "Ihhar"],
-	["Ihaar", "Iihar", "Ihar"],
-	["Ihhar", "Ihar", "Ihaar"],
-	["Ihar", "Iihar", "Ihhar"],
-	["Ihaar", "Ihhar", "Ihar"],
-	["Iihar", "Ihaar", "Ihar"],
-	["Ihhar", "Iihar", "Ihaar"],
-	["Ihar", "Ihaar", "Iihar"],
-	["Ihaar", "Ihar", "Ihhar"],
-	["Iihar", "Ihhar", "Ihaar"],
-	["Ihhar", "Ihar", "Iihar"],
-	["Ihar", "Ihhar", "Ihaar"],
-	["Ihaar", "Iihar", "Ihhar"],
-	["Iihar", "Ihar", "Ihaar"],
-	["Ihhar", "Ihaar", "Ihar"],
-	["Ihar", "Iihar", "Ihhar"],
-	["Ihaar", "Ihhar", "Ihar"],
-	["Iihar", "Ihaar", "Ihhar"]
-]
-
-LAST_NAMES = [
-	["Martsinkevich", "Martsinkevitch", "Martsinkevic"],  # Различные варианты написания Martsinkevich
-	["Martsinkevich", "Martsinkevic", "Martsinkevitch"],
-	["Martsinkevitch", "Martsinkevich", "Martsinkevic"],
-	["Martsinkevic", "Martsinkevitch", "Martsinkevich"],
-	["Martsinkevich", "Martsinkevic", "Martsinkevitch"],
-	["Martsinkevitch", "Martsinkevic", "Martsinkevich"],
-	["Martsinkevic", "Martsinkevich", "Martsinkevitch"],
-	["Martsinkevich", "Martsinkevitch", "Martsinkevic"],
-	["Martsinkevitch", "Martsinkevich", "Martsinkevic"],
-	["Martsinkevic", "Martsinkevitch", "Martsinkevich"],
-	["Martsinkevich", "Martsinkevic", "Martsinkevitch"],
-	["Martsinkevitch", "Martsinkevic", "Martsinkevich"],
-	["Martsinkevic", "Martsinkevich", "Martsinkevitch"],
-	["Martsinkevich", "Martsinkevitch", "Martsinkevic"],
-	["Martsinkevitch", "Martsinkevich", "Martsinkevic"],
-	["Martsinkevic", "Martsinkevitch", "Martsinkevich"],
-	["Martsinkevich", "Martsinkevic", "Martsinkevitch"],
-	["Martsinkevitch", "Martsinkevic", "Martsinkevich"],
-	["Martsinkevic", "Martsinkevich", "Martsinkevitch"],
-	["Martsinkevic", "Martsinkevich", "Martsinkevitch"]
-]
+# Данные пользователя теперь передаются из главного файла
 
 # Генерация случайного email
 def generate_email(name, last_name):
@@ -167,88 +121,14 @@ POSTAL_CODE = "00000"  # В Дубае может не требоваться; �
 PHONE = "+971508698540"
 
 # Массив карт (номер, срок действия, CVC)
-CARDS = [
-	#("5573770013072743", "08/30", "165"),
-	#("5573770013032259", "08/30", "065"),
-	#("5573770013076520", "08/30", "515"),
-	#("5573770013146513", "08/30", "865"),
-	#("5573770013098995", "08/30", "172"),
-	#("5573770013038330", "08/30", "694"),
-	#("5573770013125723", "08/30", "530"),
-	#("5573770013175074", "08/30", "160"),
-	#("5573770014087963", "08/30", "053"),
-	#("5573770013132307", "08/30", "903"),
-	#("5573770013198662", "08/30", "979"),
-	#("5573770013048776", "08/30", "266"),
-	#("5573770013018696", "08/30", "864"),
-	#("5573770013059013", "08/30", "647"),
-	#("5573770013002831", "08/30", "398"),
-	#("5573770013013911", "08/30", "511"),
-	#("5573770013035419", "08/30", "010"),
-	("5573770013046960", "08/30", "395"),
-	("5573770013173517", "08/30", "655"),
-	("5573770013075043", "08/30", "652")
-]
-
-NAMES = NAMES[:len(CARDS)]
-LAST_NAMES = LAST_NAMES[:len(CARDS)]
+# Массивы карт и имен теперь в главном файле
 
 # Фиксированные данные
 password = "TestPassword123!"
 
-# Индекс для выбора данных (можно менять для разных регистраций)
-current_index = 0
+# Данные теперь передаются из главного файла
 
-# Проверяем, что все массивы имеют одинаковую длину
-def validate_data_arrays():
-	arrays = [NAMES, LAST_NAMES, CARDS]
-	array_names = ["NAMES", "LAST_NAMES", "CARDS"]
-	
-	if len(set(len(arr) for arr in arrays)) > 1:
-		print("ОШИБКА: Все массивы должны иметь одинаковую длину!")
-		for i, arr in enumerate(arrays):
-			print(f"{array_names[i]}: {len(arr)} элементов")
-		return False
-	else:
-		print(f"Все массивы имеют одинаковую длину: {len(CARDS)} элементов")
-		return True
-
-# Функция для получения текущих данных пользователя
-def get_current_user_data(attempt=0):
-	card_number, exp_date, cvc = CARDS[current_index]
-	first_name = NAMES[current_index][attempt]
-	last_name = LAST_NAMES[current_index][attempt]
-	
-	return {
-		"email": generate_email(first_name, last_name),
-		"password": generate_password(),
-		"first_name": first_name,
-		"last_name": last_name,
-		"address": ADDRESS,
-		"address_line2": ADDRESS_LINE2,
-		"city": CITY,
-		"province": PROVINCE,
-		"postal_code": POSTAL_CODE,
-		"phone": PHONE,
-		"card_number": card_number,
-		"exp_date": exp_date,
-		"cvc": cvc
-	}
-
-# Функция для перехода к следующему набору данных
-def next_user_data():
-	global current_index
-	current_index = (current_index + 1) % len(CARDS)
-	return get_current_user_data()
-
-# Функция для установки конкретного индекса
-def set_user_index(index):
-	global current_index
-	if 0 <= index < len(CARDS):
-		current_index = index
-	else:
-		print(f"Индекс {index} вне диапазона. Используем индекс 0.")
-		current_index = 0
+# Функции для работы с данными удалены - данные передаются извне
 
 # Файлы логов
 LOG_FILE = "reports.log"
@@ -392,7 +272,7 @@ def click_safely(driver, wait, locators, name: str = "button"):
 				if cookie_banner.is_displayed():
 					print(f"-------Закрываем баннер куки перед кликом по {name}...-------")
 					cookie_banner.click()
-					time.sleep(1)
+					time.sleep(2)
 			except:
 				pass
 			
@@ -457,8 +337,25 @@ def click_safely(driver, wait, locators, name: str = "button"):
 
 
 # Функция выполнения регистрации
-def attempt_registration(reg_num, attempt=0):
-	user_data = get_current_user_data(attempt)
+def attempt_registration(reg_num, attempt=0, order_data=None):
+	if order_data:
+		user_data = order_data
+	else:
+		# Если данные не переданы, создаем тестовые данные
+		user_data = {
+			"email": f"test{random.randint(1000, 9999)}@example.com",
+			"password": "password123",
+			"first_name": "John",
+			"last_name": "Doe",
+			"address": "123 Main Street",
+			"city": "Dubai",
+			"province": "Dubai",
+			"phone": "+971501234567",
+			"card_number": "4111111111111111",
+			"card_expiry": "12/25",
+			"card_cvc": "123",
+			"card_name": "John Doe"
+		}
 	
 	# Подключаемся к уже запущенному браузеру AdsPower
 	debug_port = get_adspower_debug_port()
@@ -487,12 +384,12 @@ def attempt_registration(reg_num, attempt=0):
 	wait = WebDriverWait(driver, 10)
 
 	try:
-		print(f"-------Начинаем регистрацию #{reg_num + 1}-------")
+		print(f"-------Начинаем регистрацию #{reg_num}-------")
 		log_message(f"Используем данные: {user_data['email']} - {user_data['first_name']} {user_data['last_name']}")
 
 		print("-------Открываем сайт Whoop...-------")
 		driver.get("https://join.whoop.com/uae/en/")
-		time.sleep(10)  # Увеличиваем время ожидания
+		time.sleep(18)  # Увеличиваем время ожидания
 
 		print("-------Нажимаем кнопку 'Start with PEAK'...-------")
 		
@@ -506,13 +403,13 @@ def attempt_registration(reg_num, attempt=0):
 			if cookie_banner.is_displayed():
 				print("-------Закрываем баннер куки...-------")
 				cookie_banner.click()
-				time.sleep(2)
+				time.sleep(5)
 		except:
 			pass
 		
 		# Прокручиваем к кнопке
 		driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", start_peak_button)
-		time.sleep(2)
+		time.sleep(5)
 		
 		# Пробуем обычный клик
 		try:
@@ -535,7 +432,7 @@ def attempt_registration(reg_num, attempt=0):
 					print(f"❌ ActionChains клик не прошел: {e3}")
 					raise Exception("Все способы клика не сработали")
 		
-		time.sleep(10)
+		time.sleep(15)
 
 		print("-------Нажимаем 'Continue'...-------")
 		
@@ -547,7 +444,7 @@ def attempt_registration(reg_num, attempt=0):
 		if not click_safely(driver, wait, continue_locators, name="continue-button"):
 			raise Exception("Кнопка Continue не найдена или не кликабельна")
 		
-		time.sleep(10)
+		time.sleep(15)
 
 		print("-------Выбираем Trial-membership...-------")
 		
@@ -559,7 +456,7 @@ def attempt_registration(reg_num, attempt=0):
 		if not click_safely(driver, wait, trial_locators, name="trial-membership"):
 			raise Exception("Кнопка Trial-membership не найдена или не кликабельна")
 		
-		time.sleep(10)
+		time.sleep(15)
 
 		print("-------Нажимаем Check Out...-------")
 		
@@ -571,7 +468,7 @@ def attempt_registration(reg_num, attempt=0):
 		if not click_safely(driver, wait, checkout_locators, name="checkout-button"):
 			raise Exception("Кнопка Check Out не найдена или не кликабельна")
 		
-		time.sleep(10)
+		time.sleep(15)
 
 		print("-------Заполняем форму регистрации...-------")
 		email_field = wait.until(EC.presence_of_element_located((By.NAME, "email")))
@@ -597,7 +494,7 @@ def attempt_registration(reg_num, attempt=0):
 		if not click_safely(driver, wait, next_locators, name="next-button"):
 			raise Exception("Кнопка Next не найдена или не кликабельна")
 		
-		time.sleep(10)
+		time.sleep(15)
 
 		print("-------Заполняем адрес доставки...-------")
 		first_name = wait.until(EC.presence_of_element_located((By.ID, "first_name")))
@@ -670,7 +567,7 @@ def attempt_registration(reg_num, attempt=0):
 			if not click_safely(driver, wait, next_address_locators, name="next-address-button"):
 				raise Exception("Кнопка Next Address не найдена или не кликабельна")
 			
-			time.sleep(2)
+			time.sleep(15)
 		except Exception:
 			pass
 
@@ -696,7 +593,7 @@ def attempt_registration(reg_num, attempt=0):
 					fid = fld.get_attribute("id") or fld.get_attribute("name") or "<no-id>"
 					log_message(f"[ADDRESS_INVALID] {fid}")
 				raise Exception("Next after address not clickable")
-			time.sleep(10)
+			time.sleep(15)
 
 		# СНАЧАЛА проверяем, есть ли кнопка confirm-address (подтверждение адреса)
 		print("-------Проверяем, нужно ли подтвердить адрес...-------")
@@ -709,7 +606,7 @@ def attempt_registration(reg_num, attempt=0):
 			
 			driver.execute_script("arguments[0].click();", confirm_button)
 			print("✅ JavaScript клик по confirm-address прошел!")
-			time.sleep(5)
+			time.sleep(15)
 			
 		except Exception as e:
 			print(f"ℹ️ Кнопка confirm-address не найдена: {e}")
@@ -724,7 +621,7 @@ def attempt_registration(reg_num, attempt=0):
 			
 			# Прокручиваем к кнопке
 			driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", shipping_button)
-			time.sleep(2)
+			time.sleep(15)
 			
 			# Пробуем обычный клик
 			try:
@@ -750,7 +647,7 @@ def attempt_registration(reg_num, attempt=0):
 			print(f"❌ Кнопка shipping method не найдена: {e}")
 			raise Exception("Кнопка shipping method не найдена")
 		
-		time.sleep(10)
+		time.sleep(15)
 
 		print("-------Ищем iframe с полями карты-------")
 		iframe_index = None
@@ -783,10 +680,10 @@ def attempt_registration(reg_num, attempt=0):
 			wait.until(EC.presence_of_element_located((By.NAME, "cardnumber"))).send_keys(user_data["card_number"])
 			print("Ввел номер карты")
 
-			wait.until(EC.presence_of_element_located((By.NAME, "exp-date"))).send_keys(user_data["exp_date"])
+			wait.until(EC.presence_of_element_located((By.NAME, "exp-date"))).send_keys(user_data["card_expiry"])
 			print("Ввел срок действия")
 
-			wait.until(EC.presence_of_element_located((By.NAME, "cvc"))).send_keys(user_data["cvc"])
+			wait.until(EC.presence_of_element_located((By.NAME, "cvc"))).send_keys(user_data["card_cvc"])
 			print("Ввел CVC")
 
 			driver.switch_to.default_content()
@@ -805,7 +702,7 @@ def attempt_registration(reg_num, attempt=0):
 				log_message("Кнопка Place Order нажата")
 			else:
 				raise Exception("Кнопка Place Order не найдена")
-			time.sleep(3)  # Ждём обработку платежа
+			time.sleep(20)  # Ждём обработку платежа
 		except Exception as e:
 			log_message(f"Ошибка нажатия Place Order: {e}")
 			# Пробуем альтернативные селекторы
@@ -867,7 +764,7 @@ def attempt_registration(reg_num, attempt=0):
 
 			print("-------Переходим на страницу заказа...25 сек-------")
 			driver.get(order_status_link)
-			time.sleep(8)
+			time.sleep(20)
 
 			print("-------Ищем номер заказа...-------")
 			order_number_element = None
@@ -897,7 +794,7 @@ def attempt_registration(reg_num, attempt=0):
 						EC.element_to_be_clickable((By.XPATH, "//a[@data-test-id='view-order-details']"))
 					)
 					quittung_button.click()
-					time.sleep(3)  # Ждем 3 секунды
+					time.sleep(10)  # Ждем 3 секунды
 
 					print("-------Пробуем найти номер заказа в новом блоке...-------")
 					order_number_element = wait.until(
@@ -960,11 +857,23 @@ def attempt_registration(reg_num, attempt=0):
 			pass
 
 
+def run_single_registration(order_data):
+	"""Запускает одну регистрацию с переданными данными"""
+	print(f"🚀 Запуск регистрации с данными:")
+	print(f"📧 Email: {order_data['email']}")
+	print(f"💳 Карта: {order_data['card_number']}")
+	print(f"👤 Имя: {order_data['first_name']} {order_data['last_name']}")
+	
+	try:
+		success = attempt_registration(1, 0, order_data)
+		return success
+	except Exception as e:
+		print(f"❌ Ошибка в run_single_registration: {e}")
+		return False
+
 def run_flow(card_index: int | None = None) -> None:
 	try:
-		# Проверяем данные перед началом
-		if not validate_data_arrays():
-			raise Exception("Неверная конфигурация данных")
+		# Данные теперь передаются извне, проверка не нужна
 
 		if card_index is not None:
 			print("🚀 РЕЖИМ ОДНОЙ КАРТЫ - 3 попытки")
@@ -972,12 +881,12 @@ def run_flow(card_index: int | None = None) -> None:
 			total_registrations = 0
 			successful_registrations = 0
 
-			print(f"\n🔄 КАРТА #{card_index + 1} - {CARDS[card_index][0]}")
+			print(f"\n🔄 КАРТА #{card_index + 1}")
 			print("-" * 40)
 			card_success = False
 			for attempt in range(3):
 				print(f"-------Попытка {attempt + 1}/3 для карты #{card_index + 1}-------")
-				set_user_index(card_index)
+				# set_user_index больше не нужен
 				success = attempt_registration(total_registrations, attempt)
 				total_registrations += 1
 				if success:
@@ -1012,8 +921,8 @@ def run_flow(card_index: int | None = None) -> None:
 		successful_registrations = 0
 
 		# Проходим по всем картам
-		for idx in range(len(CARDS)):
-			print(f"\n🔄 КАРТА #{idx + 1} - {CARDS[idx][0]}")
+		for idx in range(3):  # 3 карты по умолчанию
+			print(f"\n🔄 КАРТА #{idx + 1}")
 			print("-" * 40)
 
 			card_success = False
@@ -1023,7 +932,7 @@ def run_flow(card_index: int | None = None) -> None:
 				print(f"-------Попытка {attempt + 1}/3 для карты #{idx + 1}-------")
 
 				# Устанавливаем текущий индекс карты
-				set_user_index(idx)
+				# set_user_index больше не нужен
 
 				# Пытаемся зарегистрироваться
 				success = attempt_registration(total_registrations, attempt)
@@ -1044,7 +953,7 @@ def run_flow(card_index: int | None = None) -> None:
 				print(f"💥 КАРТА #{idx + 1} ИСЧЕРПАНА - все 3 попытки неудачны")
 
 			# Пауза между картами
-			if idx < len(CARDS) - 1:
+			if idx < 2:  # 3 карты, последняя с индексом 2
 				print("⏳ Ждем 10 секунд перед следующей картой...")
 				time.sleep(10)
 

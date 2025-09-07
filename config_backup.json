@@ -1,0 +1,68 @@
+{
+  "profiles": [
+    {
+      "name": "Profil-Dubai-Test",
+      "proxy": {
+        "proxy_type": "socks5",
+        "proxy_host": "p.webshare.io",
+        "proxy_port": 80,
+        "proxy_username": "lqqcobna-AE-1",
+        "proxy_password": "mp8bwh5muktc",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".google.ae",
+          "name": "NID",
+          "value": "197=Yh8xGkPq3sZ9XaC7bJrLmNw0uVt2rFd4p6yOzQ1cTbM",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".facebook.ae",
+          "name": "c_user",
+          "value": "100098765432109",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".instagram.ae",
+          "name": "sessionid",
+          "value": "5678901234%3AAbCdEfGhIjKlMnOpQrStUvWxYz%3A21%3AAYcDeFGhij",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".youtube.ae",
+          "name": "VISITOR_INFO1_LIVE",
+          "value": "RANDOM_STRING_AbC123XyZ890",
+          "secure": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "name": "Profil-Ohne-Proxy",
+      "proxy": {
+        "proxy_type": "noproxy",
+        "proxy_host": "",
+        "proxy_port": "",
+        "proxy_username": "",
+        "proxy_password": "",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".google.com",
+          "name": "NID",
+          "value": "test_cookie_value",
+          "secure": true,
+          "path": "/"
+        }
+      ]
+    }
+  ]
+}

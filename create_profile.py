@@ -56,7 +56,7 @@ def list_proxies():
         return []
 
 
-def create_profile():
+def create_profile(proxy_index=None):
     """Создает один профиль в AdsPower используя существующий прокси"""
     
     # Загружаем настройки
@@ -78,11 +78,16 @@ def create_profile():
         print("❌ Нет доступных прокси. Добавьте прокси в AdsPower приложении!")
         return None
     
-    # Используем первый доступный прокси
-    proxy = proxies[0]
-    proxy_id = proxy.get('proxy_id')  # Исправлено: proxy_id вместо id
+    # Используем прокси по индексу или случайный
+    if proxy_index is not None and 0 <= proxy_index < len(proxies):
+        proxy = proxies[proxy_index]
+        print(f"✅ Использую прокси #{proxy_index + 1}: {proxy.get('type')}://{proxy.get('host')}:{proxy.get('port')}")
+    else:
+        import random
+        proxy = random.choice(proxies)
+        print(f"✅ Использую случайный прокси: {proxy.get('type')}://{proxy.get('host')}:{proxy.get('port')}")
     
-    print(f"✅ Использую прокси: {proxy.get('type')}://{proxy.get('host')}:{proxy.get('port')}")
+    proxy_id = proxy.get('proxy_id')
     
     # Данные для создания профиля
     profile_data = {

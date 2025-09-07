@@ -1,6 +1,235 @@
 {
   "profiles": [
     {
+      "name": "Profil-Dubai-1",
+      "proxy": {
+        "proxy_type": "socks5",
+        "proxy_host": "p.webshare.io",
+        "proxy_port": 80,
+        "proxy_username": "lqqcobna-AE-1",
+        "proxy_password": "mp8bwh5muktc",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".google.ae",
+          "name": "NID",
+          "value": "197=Yh8xGkPq3sZ9XaC7bJrLmNw0uVt2rFd4p6yOzQ1cTbM",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".facebook.ae",
+          "name": "c_user",
+          "value": "100098765432109",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".instagram.ae",
+          "name": "sessionid",
+          "value": "5678901234%3AAbCdEfGhIjKlMnOpQrStUvWxYz%3A21%3AAYcDeFGhij",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".youtube.ae",
+          "name": "VISITOR_INFO1_LIVE",
+          "value": "RANDOM_STRING_AbC123XyZ890",
+          "secure": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "name": "Profil-Dubai-2",
+      "proxy": {
+        "proxy_type": "noproxy",
+        "proxy_host": "",
+        "proxy_port": "",
+        "proxy_username": "",
+        "proxy_password": "",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".amazon.ae",
+          "name": "session-id",
+          "value": "amz_1234567890abcdef",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".netflix.ae",
+          "name": "NetflixId",
+          "value": "netflix_abc123def456",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".spotify.ae",
+          "name": "sp_dc",
+          "value": "spotify_token_xyz789",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "name": "Profil-Dubai-3",
+      "proxy": {
+        "proxy_type": "noproxy",
+        "proxy_host": "",
+        "proxy_port": "",
+        "proxy_username": "",
+        "proxy_password": "",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".twitter.ae",
+          "name": "auth_token",
+          "value": "twitter_auth_123456",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".linkedin.ae",
+          "name": "li_at",
+          "value": "linkedin_token_abcdef",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".tiktok.ae",
+          "name": "tt_webid",
+          "value": "tiktok_webid_789xyz",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "name": "Profil-Dubai-4",
+      "proxy": {
+        "proxy_type": "noproxy",
+        "proxy_host": "",
+        "proxy_port": "",
+        "proxy_username": "",
+        "proxy_password": "",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".reddit.ae",
+          "name": "reddit_session",
+          "value": "reddit_session_123abc",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".discord.ae",
+          "name": "discord_token",
+          "value": "discord_token_456def",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".twitch.ae",
+          "name": "twitch_session",
+          "value": "twitch_session_789ghi",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "name": "Profil-Dubai-5",
+      "proxy": {
+        "proxy_type": "noproxy",
+        "proxy_host": "",
+        "proxy_port": "",
+        "proxy_username": "",
+        "proxy_password": "",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".pinterest.ae",
+          "name": "pinterest_session",
+          "value": "pinterest_123xyz",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".snapchat.ae",
+          "name": "snapchat_token",
+          "value": "snapchat_token_456abc",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".telegram.ae",
+          "name": "tg_session",
+          "value": "telegram_session_789def",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "name": "Profil-Dubai-6",
+      "proxy": {
+        "proxy_type": "noproxy",
+        "proxy_host": "",
+        "proxy_port": "",
+        "proxy_username": "",
+        "proxy_password": "",
+        "proxy_soft": "other"
+      },
+      "cookies": [
+        {
+          "domain": ".whatsapp.ae",
+          "name": "wa_session",
+          "value": "whatsapp_session_123ghi",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".zoom.ae",
+          "name": "zoom_token",
+          "value": "zoom_token_456jkl",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        },
+        {
+          "domain": ".skype.ae",
+          "name": "skype_session",
+          "value": "skype_session_789mno",
+          "secure": true,
+          "httpOnly": true,
+          "path": "/"
+        }
+      ]
+    },
+    {
       "name": "Profil-Dubai-7",
       "proxy": {
         "proxy_type": "noproxy",
