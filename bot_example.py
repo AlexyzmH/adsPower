@@ -21,6 +21,41 @@ import argparse as _argparse
 from selenium.webdriver.common.keys import Keys
 
 
+def human_type(element, text, min_delay=0.05, max_delay=0.15):
+    """
+    Имитирует человеческий ввод текста с задержками между символами
+    
+    Args:
+        element: WebElement для ввода текста
+        text: Текст для ввода
+        min_delay: Минимальная задержка между символами (секунды)
+        max_delay: Максимальная задержка между символами (секунды)
+    """
+    try:
+        # Очищаем поле
+        element.clear()
+        time.sleep(random.uniform(0.1, 0.3))
+        
+        # Вводим каждый символ с задержкой
+        for char in text:
+            element.send_keys(char)
+            # Случайная задержка между символами
+            delay = random.uniform(min_delay, max_delay)
+            time.sleep(delay)
+            
+        # Небольшая пауза после завершения ввода
+        time.sleep(random.uniform(0.2, 0.5))
+        
+    except Exception as e:
+        print(f"❌ Ошибка при человеческом вводе: {e}")
+        # Fallback - обычный ввод
+        try:
+            element.clear()
+            element.send_keys(text)
+        except:
+            pass
+
+
 # Функция для получения debug port от AdsPower
 def get_adspower_debug_port():
 	"""Получает debug port запущенного браузера AdsPower"""
@@ -111,20 +146,19 @@ def generate_password():
 	return ''.join(random.choices(string.ascii_letters + string.digits, k=14))
 
 # Фиксированный адрес для всех регистраций (ОАЭ)
-ADDRESS = "Apt4208,42 floor"
-ADDRESS_LINE2 = "PrincessTower"
+ADDRESS = "__Apt4208/42 _room_number_"
+ADDRESS_LINE2 = "__building::PrincessTower"
 
 # Фиксированные данные для всех регистраций
 CITY = "Dubai"
 PROVINCE = "Dubai Marina"
-POSTAL_CODE = "00000"  # В Дубае может не требоваться; используем 00000 при необходимости
 PHONE = "+971508698540"
 
 # Массив карт (номер, срок действия, CVC)
 # Массивы карт и имен теперь в главном файле
 
 # Фиксированные данные
-password = "TestPassword123!"
+password = "passLiketest12141"
 
 # Данные теперь передаются из главного файла
 
@@ -266,15 +300,7 @@ def click_safely(driver, wait, locators, name: str = "button"):
 		try:
 			el = wait.until(EC.presence_of_element_located(locator))
 			
-			# Закрываем баннер куки если он есть
-			try:
-				cookie_banner = driver.find_element(By.CSS_SELECTOR, "#onetrust-accept-btn-handler, .ot-sdk-show-settings, [data-testid*='cookie']")
-				if cookie_banner.is_displayed():
-					print(f"-------Закрываем баннер куки перед кликом по {name}...-------")
-					cookie_banner.click()
-					time.sleep(2)
-			except:
-				pass
+		# Cookie banner уже закрыт в начале функции attempt_registration
 			
 			try:
 				driver.execute_script(
@@ -389,7 +415,43 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 
 		print("-------Открываем сайт Whoop...-------")
 		driver.get("https://join.whoop.com/uae/en/")
-		time.sleep(18)  # Увеличиваем время ожидания
+		time.sleep(20)  
+
+		# Закрываем баннер
+		print("-------Закрываем cookie banner...-------")
+		try:
+			cookie_selectors = [
+				"//button[contains(text(), 'ACCEPT')]",
+				"//button[contains(text(), 'Accept')]", 
+				"[data-testid*='accept']",
+				"[data-testid*='cookie']",
+				"#onetrust-accept-btn-handler",
+				".ot-sdk-show-settings",
+				"button[class*='accept']",
+				"button[class*='cookie']"
+			]
+			
+			cookie_closed = False
+			for selector in cookie_selectors:
+				try:
+					if selector.startswith("//"):
+						cookie_banner = driver.find_element(By.XPATH, selector)
+					else:
+						cookie_banner = driver.find_element(By.CSS_SELECTOR, selector)
+					
+					if cookie_banner.is_displayed():
+						print("🍪 Закрываю cookie banner...")
+						cookie_banner.click()
+						cookie_closed = True
+						time.sleep(5)
+						break
+				except:
+					continue
+			
+			if not cookie_closed:
+				print("⚠️ Cookie banner не найден или уже закрыт")
+		except:
+			print("⚠️ Ошибка при закрытии cookie banner")
 
 		print("-------Нажимаем кнопку 'Start with PEAK'...-------")
 		
@@ -397,42 +459,27 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		start_peak_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@data-testid='membership-PEAK-card-cta']")))
 		print("✅ Кнопка найдена!")
 		
-		# Закрываем баннер куки если он есть
-		try:
-			cookie_banner = driver.find_element(By.CSS_SELECTOR, "#onetrust-accept-btn-handler, .ot-sdk-show-settings, [data-testid*='cookie']")
-			if cookie_banner.is_displayed():
-				print("-------Закрываем баннер куки...-------")
-				cookie_banner.click()
-				time.sleep(5)
-		except:
-			pass
-		
 		# Прокручиваем к кнопке
 		driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", start_peak_button)
 		time.sleep(5)
 		
-		# Пробуем обычный клик
+		print("-------Пробуем клик через JavaScript...-------")
+
 		try:
-			start_peak_button.click()
-			print("✅ Обычный клик прошел!")
-		except Exception as e:
-			print(f"❌ Обычный клик не прошел: {e}")
-			# Пробуем клик через JavaScript
+			driver.execute_script("arguments[0].click();", start_peak_button)
+			print("✅ JavaScript клик прошел!")
+		except Exception as e2:
+			print(f"❌ JavaScript клик не прошел: {e2}")
+			# Пробуем ActionChains
 			try:
-				driver.execute_script("arguments[0].click();", start_peak_button)
-				print("✅ JavaScript клик прошел!")
-			except Exception as e2:
-				print(f"❌ JavaScript клик не прошел: {e2}")
-				# Пробуем ActionChains
-				try:
-					from selenium.webdriver.common.action_chains import ActionChains
-					ActionChains(driver).move_to_element(start_peak_button).click().perform()
-					print("✅ ActionChains клик прошел!")
-				except Exception as e3:
-					print(f"❌ ActionChains клик не прошел: {e3}")
-					raise Exception("Все способы клика не сработали")
+				from selenium.webdriver.common.action_chains import ActionChains
+				ActionChains(driver).move_to_element(start_peak_button).click().perform()
+				print("✅ ActionChains клик прошел!")
+			except Exception as e3:
+				print(f"❌ ActionChains клик не прошел: {e3}")
+				raise Exception("Все способы клика не сработали")
 		
-		time.sleep(15)
+		time.sleep(20)
 
 		print("-------Нажимаем 'Continue'...-------")
 		
@@ -444,7 +491,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		if not click_safely(driver, wait, continue_locators, name="continue-button"):
 			raise Exception("Кнопка Continue не найдена или не кликабельна")
 		
-		time.sleep(15)
+		time.sleep(20)
 
 		print("-------Выбираем Trial-membership...-------")
 		
@@ -456,7 +503,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		if not click_safely(driver, wait, trial_locators, name="trial-membership"):
 			raise Exception("Кнопка Trial-membership не найдена или не кликабельна")
 		
-		time.sleep(15)
+		time.sleep(20)
 
 		print("-------Нажимаем Check Out...-------")
 		
@@ -468,21 +515,18 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		if not click_safely(driver, wait, checkout_locators, name="checkout-button"):
 			raise Exception("Кнопка Check Out не найдена или не кликабельна")
 		
-		time.sleep(15)
+		time.sleep(20)
 
 		print("-------Заполняем форму регистрации...-------")
 		email_field = wait.until(EC.presence_of_element_located((By.NAME, "email")))
-		email_field.send_keys(user_data["email"])
+		human_type(email_field, user_data["email"])
 		log_message(f"Email: {user_data['email']}")
-		time.sleep(1)
 
 		password_field = driver.find_element(By.NAME, "password")
-		password_field.send_keys(user_data["password"])
-		time.sleep(1)
+		human_type(password_field, user_data["password"])
 
 		confirm_password = driver.find_element(By.NAME, "confirm")
-		confirm_password.send_keys(user_data["password"])
-		time.sleep(1)
+		human_type(confirm_password, user_data["password"])
 
 		print("-------Нажимаем 'Next' после регистрации...-------")
 		
@@ -494,26 +538,22 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		if not click_safely(driver, wait, next_locators, name="next-button"):
 			raise Exception("Кнопка Next не найдена или не кликабельна")
 		
-		time.sleep(15)
+		time.sleep(20)
 
 		print("-------Заполняем адрес доставки...-------")
 		first_name = wait.until(EC.presence_of_element_located((By.ID, "first_name")))
-		first_name.send_keys(user_data["first_name"])
-		time.sleep(1)
+		human_type(first_name, user_data["first_name"])
 
 		last_name = driver.find_element(By.ID, "last_name")
-		last_name.send_keys(user_data["last_name"])
-		time.sleep(1)
+		human_type(last_name, user_data["last_name"])
 
 		print("-------Вводим адрес...-------")
 		address = wait.until(EC.presence_of_element_located((By.ID, "line1")))
-		address.send_keys(user_data["address"])
-		time.sleep(1)
+		human_type(address, user_data["address"])
 
 		try:
 			address2 = driver.find_element(By.ID, "line2")
-			address2.send_keys(user_data["address_line2"])
-			time.sleep(1)
+			human_type(address2, user_data["address_line2"])
 		except Exception:
 			pass
 
@@ -522,40 +562,34 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='City'][role='combobox']"))
 		)
 		city_el.click()
-		city_el.send_keys(user_data["city"])
+		human_type(city_el, user_data["city"])
 		city_el.send_keys(Keys.ENTER)
-		time.sleep(1)
 
 		print("-------Вводим Area/District...-------")
 		try:
 			# Поле Area/District (ищем по data-testid "Area/District")
 			area_district = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='Area/District']")))
-			area_district.clear()  # Очищаем поле
-			area_district.send_keys(user_data["province"])  # Используем значение из province для Area/District
+			human_type(area_district, user_data["province"])  # Используем значение из province для Area/District
 			print(f"✅ Введено в Area/District: {user_data['province']}")
 		except Exception as e:
 			print(f"❌ Ошибка ввода Area/District: {e}")
 			# Пробуем альтернативные способы
 			try:
 				area_district = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='province']")))
-				area_district.clear()
-				area_district.send_keys(user_data["province"])
+				human_type(area_district, user_data["province"])
 				print(f"✅ Введено в Area/District (через province): {user_data['province']}")
 			except Exception as e2:
 				print(f"❌ Через province не сработал: {e2}")
 				try:
 					area_district = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[aria-label='Command input']")))
-					area_district.clear()
-					area_district.send_keys(user_data["province"])
+					human_type(area_district, user_data["province"])
 					print(f"✅ Введено в Area/District (через aria-label): {user_data['province']}")
 				except Exception as e3:
 					print(f"❌ Все способы не сработали: {e3}")
-		time.sleep(1)
 
 		print("-------Вводим телефон...-------")
 		phone = wait.until(EC.presence_of_element_located((By.ID, "phone")))
-		phone.send_keys(user_data["phone"])
-		time.sleep(1)
+		human_type(phone, user_data["phone"])
 
 		print("-------Нажимаем 'Next' после ввода адреса...-------")
 		try:
@@ -567,7 +601,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			if not click_safely(driver, wait, next_address_locators, name="next-address-button"):
 				raise Exception("Кнопка Next Address не найдена или не кликабельна")
 			
-			time.sleep(15)
+			time.sleep(20)
 		except Exception:
 			pass
 
@@ -593,7 +627,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 					fid = fld.get_attribute("id") or fld.get_attribute("name") or "<no-id>"
 					log_message(f"[ADDRESS_INVALID] {fid}")
 				raise Exception("Next after address not clickable")
-			time.sleep(15)
+			time.sleep(20)
 
 		# СНАЧАЛА проверяем, есть ли кнопка confirm-address (подтверждение адреса)
 		print("-------Проверяем, нужно ли подтвердить адрес...-------")
@@ -606,7 +640,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			
 			driver.execute_script("arguments[0].click();", confirm_button)
 			print("✅ JavaScript клик по confirm-address прошел!")
-			time.sleep(15)
+			time.sleep(20)
 			
 		except Exception as e:
 			print(f"ℹ️ Кнопка confirm-address не найдена: {e}")
@@ -621,7 +655,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			
 			# Прокручиваем к кнопке
 			driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", shipping_button)
-			time.sleep(15)
+			time.sleep(20)
 			
 			# Пробуем обычный клик
 			try:
@@ -647,7 +681,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			print(f"❌ Кнопка shipping method не найдена: {e}")
 			raise Exception("Кнопка shipping method не найдена")
 		
-		time.sleep(15)
+		time.sleep(20)
 
 		print("-------Ищем iframe с полями карты-------")
 		iframe_index = None
@@ -677,13 +711,16 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		try:
 			driver.switch_to.frame(iframes[iframe_index])
 
-			wait.until(EC.presence_of_element_located((By.NAME, "cardnumber"))).send_keys(user_data["card_number"])
+			card_number_field = wait.until(EC.presence_of_element_located((By.NAME, "cardnumber")))
+			human_type(card_number_field, user_data["card_number"])
 			print("Ввел номер карты")
 
-			wait.until(EC.presence_of_element_located((By.NAME, "exp-date"))).send_keys(user_data["card_expiry"])
+			exp_date_field = wait.until(EC.presence_of_element_located((By.NAME, "exp-date")))
+			human_type(exp_date_field, user_data["card_expiry"])
 			print("Ввел срок действия")
 
-			wait.until(EC.presence_of_element_located((By.NAME, "cvc"))).send_keys(user_data["card_cvc"])
+			cvc_field = wait.until(EC.presence_of_element_located((By.NAME, "cvc")))
+			human_type(cvc_field, user_data["card_cvc"])
 			print("Ввел CVC")
 
 			driver.switch_to.default_content()
@@ -702,7 +739,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 				log_message("Кнопка Place Order нажата")
 			else:
 				raise Exception("Кнопка Place Order не найдена")
-			time.sleep(20)  # Ждём обработку платежа
+			time.sleep(25)  # Ждём обработку платежа
 		except Exception as e:
 			log_message(f"Ошибка нажатия Place Order: {e}")
 			# Пробуем альтернативные селекторы
