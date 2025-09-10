@@ -21,7 +21,7 @@ import argparse as _argparse
 from selenium.webdriver.common.keys import Keys
 
 
-def human_type(element, text, min_delay=0.05, max_delay=0.15):
+def human_type(element, text, min_delay=0.08, max_delay=0.25):
     """
     Имитирует человеческий ввод текста с задержками между символами
     
@@ -34,17 +34,34 @@ def human_type(element, text, min_delay=0.05, max_delay=0.15):
     try:
         # Очищаем поле
         element.clear()
-        time.sleep(random.uniform(0.1, 0.3))
+        time.sleep(random.uniform(0.2, 0.5))
         
         # Вводим каждый символ с задержкой
-        for char in text:
+        for i, char in enumerate(text):
             element.send_keys(char)
-            # Случайная задержка между символами
-            delay = random.uniform(min_delay, max_delay)
+            
+            # Различные задержки для разных типов символов
+            if char.isdigit():
+                # Цифры вводятся быстрее
+                delay = random.uniform(0.05, 0.15)
+            elif char in '.,!?@':
+                # Знаки препинания - пауза подольше
+                delay = random.uniform(0.15, 0.3)
+            elif char == ' ':
+                # Пробелы - короткая пауза
+                delay = random.uniform(0.1, 0.2)
+            else:
+                # Обычные буквы
+                delay = random.uniform(min_delay, max_delay)
+            
+            # Иногда делаем более длинную паузу (как будто думаем)
+            if random.random() < 0.1:  # 10% шанс
+                delay += random.uniform(0.3, 0.8)
+            
             time.sleep(delay)
             
         # Небольшая пауза после завершения ввода
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(0.3, 0.8))
         
     except Exception as e:
         print(f"❌ Ошибка при человеческом вводе: {e}")
@@ -54,6 +71,71 @@ def human_type(element, text, min_delay=0.05, max_delay=0.15):
             element.send_keys(text)
         except:
             pass
+
+
+def human_scroll(driver, direction="down", distance=None):
+    """
+    Имитирует человеческое прокручивание страницы
+    
+    Args:
+        driver: WebDriver instance
+        direction: "down", "up", "random"
+        distance: количество пикселей для прокрутки (если None - случайное)
+    """
+    try:
+        if distance is None:
+            distance = random.randint(200, 800)
+        
+        if direction == "random":
+            direction = random.choice(["down", "up"])
+        
+        # Плавная прокрутка с паузами
+        if direction == "down":
+            driver.execute_script(f"window.scrollBy(0, {distance});")
+        else:
+            driver.execute_script(f"window.scrollBy(0, -{distance});")
+        
+        # Пауза после прокрутки
+        time.sleep(random.uniform(0.5, 1.5))
+        
+    except Exception as e:
+        print(f"❌ Ошибка при прокрутке: {e}")
+
+
+def human_mouse_movement(driver, element=None):
+    """
+    Имитирует движение мыши к элементу или случайное движение
+    
+    Args:
+        driver: WebDriver instance
+        element: WebElement (опционально)
+    """
+    try:
+        if element:
+            # Плавное движение к элементу
+            ActionChains(driver).move_to_element(element).perform()
+            time.sleep(random.uniform(0.2, 0.5))
+        else:
+            # Случайное движение мыши
+            x_offset = random.randint(-100, 100)
+            y_offset = random.randint(-100, 100)
+            ActionChains(driver).move_by_offset(x_offset, y_offset).perform()
+            time.sleep(random.uniform(0.1, 0.3))
+            
+    except Exception as e:
+        print(f"❌ Ошибка при движении мыши: {e}")
+
+
+def human_pause(min_seconds=1.0, max_seconds=3.0):
+    """
+    Имитирует человеческую паузу (чтение, размышление)
+    
+    Args:
+        min_seconds: минимальная пауза
+        max_seconds: максимальная пауза
+    """
+    pause_time = random.uniform(min_seconds, max_seconds)
+    time.sleep(pause_time)
 
 
 # Функция для получения debug port от AdsPower
@@ -415,7 +497,14 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 
 		print("-------Открываем сайт Whoop...-------")
 		driver.get("https://join.whoop.com/uae/en/")
-		time.sleep(20)  
+		time.sleep(20)
+		
+		# Человеческое поведение: прокручиваем страницу вверх-вниз
+		print("🔄 Имитируем просмотр страницы...")
+		human_scroll(driver, "down", random.randint(300, 600))
+		human_pause(1.0, 2.5)
+		human_scroll(driver, "up", random.randint(200, 400))
+		human_pause(0.5, 1.5)  
 
 		# Закрываем баннер
 		print("-------Закрываем cookie banner...-------")
@@ -463,6 +552,10 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", start_peak_button)
 		time.sleep(5)
 		
+		# Человеческое поведение: движение мыши к кнопке
+		human_mouse_movement(driver, start_peak_button)
+		human_pause(1.0, 2.0)
+		
 		print("-------Пробуем клик через JavaScript...-------")
 
 		try:
@@ -480,6 +573,11 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 				raise Exception("Все способы клика не сработали")
 		
 		time.sleep(20)
+		
+		# Человеческое поведение: прокручиваем страницу после перехода
+		print("🔄 Изучаем новую страницу...")
+		human_scroll(driver, "down", random.randint(200, 500))
+		human_pause(1.5, 3.0)
 
 		print("-------Нажимаем 'Continue'...-------")
 		
@@ -492,6 +590,13 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			raise Exception("Кнопка Continue не найдена или не кликабельна")
 		
 		time.sleep(20)
+		
+		# Человеческое поведение: изучаем варианты членства
+		print("🔄 Изучаем варианты членства...")
+		human_scroll(driver, "down", random.randint(150, 400))
+		human_pause(2.0, 4.0)
+		human_scroll(driver, "up", random.randint(100, 300))
+		human_pause(1.0, 2.0)
 
 		print("-------Выбираем Trial-membership...-------")
 		
@@ -504,6 +609,11 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			raise Exception("Кнопка Trial-membership не найдена или не кликабельна")
 		
 		time.sleep(20)
+		
+		# Человеческое поведение: изучаем корзину
+		print("🔄 Изучаем корзину...")
+		human_scroll(driver, "down", random.randint(100, 300))
+		human_pause(1.5, 2.5)
 
 		print("-------Нажимаем Check Out...-------")
 		
@@ -516,16 +626,26 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			raise Exception("Кнопка Check Out не найдена или не кликабельна")
 		
 		time.sleep(20)
+		
+		# Человеческое поведение: изучаем форму регистрации
+		print("🔄 Изучаем форму регистрации...")
+		human_scroll(driver, "down", random.randint(200, 500))
+		human_pause(2.0, 3.5)
+		human_scroll(driver, "up", random.randint(100, 300))
+		human_pause(1.0, 2.0)
 
 		print("-------Заполняем форму регистрации...-------")
 		email_field = wait.until(EC.presence_of_element_located((By.NAME, "email")))
+		human_mouse_movement(driver, email_field)
 		human_type(email_field, user_data["email"])
 		log_message(f"Email: {user_data['email']}")
 
 		password_field = driver.find_element(By.NAME, "password")
+		human_mouse_movement(driver, password_field)
 		human_type(password_field, user_data["password"])
 
 		confirm_password = driver.find_element(By.NAME, "confirm")
+		human_mouse_movement(driver, confirm_password)
 		human_type(confirm_password, user_data["password"])
 
 		print("-------Нажимаем 'Next' после регистрации...-------")
@@ -539,20 +659,29 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			raise Exception("Кнопка Next не найдена или не кликабельна")
 		
 		time.sleep(20)
+		
+		# Человеческое поведение: изучаем форму адреса
+		print("🔄 Изучаем форму адреса...")
+		human_scroll(driver, "down", random.randint(150, 400))
+		human_pause(2.0, 3.0)
 
 		print("-------Заполняем адрес доставки...-------")
 		first_name = wait.until(EC.presence_of_element_located((By.ID, "first_name")))
+		human_mouse_movement(driver, first_name)
 		human_type(first_name, user_data["first_name"])
 
 		last_name = driver.find_element(By.ID, "last_name")
+		human_mouse_movement(driver, last_name)
 		human_type(last_name, user_data["last_name"])
 
 		print("-------Вводим адрес...-------")
 		address = wait.until(EC.presence_of_element_located((By.ID, "line1")))
+		human_mouse_movement(driver, address)
 		human_type(address, user_data["address"])
 
 		try:
 			address2 = driver.find_element(By.ID, "line2")
+			human_mouse_movement(driver, address2)
 			human_type(address2, user_data["address_line2"])
 		except Exception:
 			pass
@@ -561,6 +690,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		city_el = WebDriverWait(driver, 10).until(
 			EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='City'][role='combobox']"))
 		)
+		human_mouse_movement(driver, city_el)
 		city_el.click()
 		human_type(city_el, user_data["city"])
 		city_el.send_keys(Keys.ENTER)
@@ -589,6 +719,7 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 
 		print("-------Вводим телефон...-------")
 		phone = wait.until(EC.presence_of_element_located((By.ID, "phone")))
+		human_mouse_movement(driver, phone)
 		human_type(phone, user_data["phone"])
 
 		print("-------Нажимаем 'Next' после ввода адреса...-------")
@@ -710,18 +841,28 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		# Вводим данные карты
 		try:
 			driver.switch_to.frame(iframes[iframe_index])
+			
+			# Человеческое поведение: изучаем форму карты
+			print("🔄 Изучаем форму карты...")
+			human_pause(1.0, 2.0)
 
 			card_number_field = wait.until(EC.presence_of_element_located((By.NAME, "cardnumber")))
+			human_mouse_movement(driver, card_number_field)
 			human_type(card_number_field, user_data["card_number"])
 			print("Ввел номер карты")
+			human_pause(0.5, 1.0)
 
 			exp_date_field = wait.until(EC.presence_of_element_located((By.NAME, "exp-date")))
+			human_mouse_movement(driver, exp_date_field)
 			human_type(exp_date_field, user_data["card_expiry"])
 			print("Ввел срок действия")
+			human_pause(0.5, 1.0)
 
 			cvc_field = wait.until(EC.presence_of_element_located((By.NAME, "cvc")))
+			human_mouse_movement(driver, cvc_field)
 			human_type(cvc_field, user_data["card_cvc"])
 			print("Ввел CVC")
+			human_pause(1.0, 2.0)
 
 			driver.switch_to.default_content()
 		except Exception as e:

@@ -11,30 +11,7 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_123stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_456vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_789yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
