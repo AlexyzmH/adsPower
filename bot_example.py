@@ -445,7 +445,7 @@ def click_safely(driver, wait, locators, name: str = "button"):
 
 
 # Функция выполнения регистрации
-def attempt_registration(reg_num, attempt=0, order_data=None):
+def attempt_registration(reg_num, attempt=0, order_data=None, return_driver=False):
 	if order_data:
 		user_data = order_data
 	else:
@@ -475,6 +475,12 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 	# Подключаемся к удаленному браузеру AdsPower
 	options.add_experimental_option("debuggerAddress", f"127.0.0.1:{debug_port}")
 	
+	# Принудительно используем десктопную версию сайта
+	options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+	options.add_argument("--window-size=1920,1080")
+	options.add_argument("--disable-mobile-emulation")
+	options.add_argument("--disable-device-emulation")
+	
 	# Получаем путь к WebDriver от AdsPower
 	webdriver_path = get_adspower_webdriver_path()
 	
@@ -496,7 +502,29 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		log_message(f"Используем данные: {user_data['email']} - {user_data['first_name']} {user_data['last_name']}")
 
 		print("-------Открываем сайт Whoop...-------")
-		driver.get("https://join.whoop.com/uae/en/")
+		driver.get("https://www.whoop.com/ae/en/")
+		
+		# Принудительно переключаемся на десктопную версию
+		print("🖥️ Принудительно переключаемся на десктопную версию...")
+		driver.execute_script("""
+			// Удаляем мобильные viewport мета-теги
+			var mobileViewports = document.querySelectorAll('meta[name="viewport"]');
+			mobileViewports.forEach(function(meta) {
+				if (meta.content.includes('width=device-width') || meta.content.includes('initial-scale=1')) {
+					meta.remove();
+				}
+			});
+			
+			// Добавляем десктопный viewport
+			var desktopViewport = document.createElement('meta');
+			desktopViewport.name = 'viewport';
+			desktopViewport.content = 'width=1920, initial-scale=1.0';
+			document.head.appendChild(desktopViewport);
+			
+			// Устанавливаем размер окна
+			window.resizeTo(1920, 1080);
+		""")
+		
 		time.sleep(20)
 		
 		# Человеческое поведение: прокручиваем страницу вверх-вниз
@@ -542,11 +570,48 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 		except:
 			print("⚠️ Ошибка при закрытии cookie banner")
 
+		print("-------Нажимаем кнопку 'Join Now'...-------")
+		
+		# Ждем появления кнопки Join Now
+		join_now_button = wait.until(EC.presence_of_element_located((By.XPATH, "//a[contains(@class, 'primary-button_primary-cta')]//span[contains(text(), 'Join Now')]")))
+		print("✅ Кнопка Join Now найдена!")
+		
+		# Прокручиваем к кнопке
+		driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", join_now_button)
+		time.sleep(5)
+		
+		# Человеческое поведение: движение мыши к кнопке
+		human_mouse_movement(driver, join_now_button)
+		human_pause(1.0, 2.0)
+		
+		print("-------Пробуем клик через JavaScript...-------")
+
+		try:
+			driver.execute_script("arguments[0].click();", join_now_button)
+			print("✅ JavaScript клик прошел!")
+		except Exception as e2:
+			print(f"❌ JavaScript клик не прошел: {e2}")
+			# Пробуем ActionChains
+			try:
+				from selenium.webdriver.common.action_chains import ActionChains
+				ActionChains(driver).move_to_element(join_now_button).click().perform()
+				print("✅ ActionChains клик прошел!")
+			except Exception as e3:
+				print(f"❌ ActionChains клик не прошел: {e3}")
+				raise Exception("Все способы клика не сработали")
+		
+		time.sleep(20)
+		
+		# Человеческое поведение: прокручиваем страницу после перехода
+		print("🔄 Изучаем новую страницу...")
+		human_scroll(driver, "down", random.randint(200, 500))
+		human_pause(1.5, 3.0)
+
 		print("-------Нажимаем кнопку 'Start with PEAK'...-------")
 		
-		# Ждем появления кнопки
+		# Ждем появления кнопки Start with PEAK
 		start_peak_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@data-testid='membership-PEAK-card-cta']")))
-		print("✅ Кнопка найдена!")
+		print("✅ Кнопка Start with PEAK найдена!")
 		
 		# Прокручиваем к кнопке
 		driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", start_peak_button)
@@ -1008,6 +1073,8 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			return False  # Неудачная регистрация
 
 		log_message(f"Регистрация #{reg_num + 1} завершена для {user_data['email']}")
+		if return_driver:
+			return True, driver, wait  # Успешная регистрация + driver/wait
 		return True  # Успешная регистрация
 
 	except Exception as e:
@@ -1023,16 +1090,75 @@ def attempt_registration(reg_num, attempt=0, order_data=None):
 			log_message("[DEBUG] Saved whoop_error_page.png")
 		except Exception:
 			pass
+		if return_driver:
+			return False, driver, wait  # Неудачная регистрация + driver/wait
 		return False  # Неудачная регистрация
 
 	finally:
-		print("-------Закрываем браузер...-------")
-		time.sleep(1)
-		try:
-			driver.quit()
-		finally:
-			# НЕ удаляем профиль - он управляется AdsPower
-			pass
+		if not return_driver:
+			print("-------Закрываем браузер...-------")
+			time.sleep(1)
+			try:
+				driver.quit()
+			finally:
+				# НЕ удаляем профиль - он управляется AdsPower
+				pass
+
+
+def change_card_data_only(driver, wait, order_data):
+	"""Меняет только данные карты на уже заполненной странице"""
+	try:
+		print("-------Меняем данные карты...-------")
+		
+		# Ищем iframe с полями карты
+		iframe_index = None
+		iframes = driver.find_elements(By.TAG_NAME, "iframe")
+
+		for index, iframe in enumerate(iframes):
+			try:
+				driver.switch_to.frame(iframe)
+				inner_html = driver.execute_script("return document.body.innerHTML")
+
+				if "cardnumber" in inner_html and "exp-date" in inner_html and "cvc" in inner_html:
+					iframe_index = index
+					print(f"Найден нужный iframe: #{iframe_index}")
+					driver.switch_to.default_content()
+					break
+
+				driver.switch_to.default_content()
+			except Exception as e:
+				print(f"Ошибка при проверке iframe[{index}]: {e}")
+				driver.switch_to.default_content()
+
+		if iframe_index is None:
+			print("❌ Не удалось найти iframe с полями карты")
+			return False
+
+		# Меняем данные карты
+		driver.switch_to.frame(iframes[iframe_index])
+
+		card_number_field = wait.until(EC.presence_of_element_located((By.NAME, "cardnumber")))
+		card_number_field.clear()
+		human_type(card_number_field, order_data["card_number"])
+		print("Ввел новый номер карты")
+
+		exp_date_field = wait.until(EC.presence_of_element_located((By.NAME, "exp-date")))
+		exp_date_field.clear()
+		human_type(exp_date_field, order_data["card_expiry"])
+		print("Ввел новый срок действия")
+
+		cvc_field = wait.until(EC.presence_of_element_located((By.NAME, "cvc")))
+		cvc_field.clear()
+		human_type(cvc_field, order_data["card_cvc"])
+		print("Ввел новый CVC")
+
+		driver.switch_to.default_content()
+		return True
+		
+	except Exception as e:
+		print(f"❌ Ошибка при смене данных карты: {e}")
+		driver.switch_to.default_content()
+		return False
 
 
 def run_single_registration(order_data):
@@ -1047,6 +1173,73 @@ def run_single_registration(order_data):
 		return success
 	except Exception as e:
 		print(f"❌ Ошибка в run_single_registration: {e}")
+		return False
+
+
+def run_registration_with_card_retry(order_data_list):
+	"""Запускает регистрацию с возможностью смены карт на месте"""
+	print(f"🚀 Запуск регистрации с {len(order_data_list)} картами")
+	
+	# Первая попытка с первой картой - полная регистрация
+	first_order = order_data_list[0]
+	print(f"📧 Email: {first_order['email']}")
+	print(f"👤 Имя: {first_order['first_name']} {first_order['last_name']}")
+	
+	try:
+		# Полная регистрация с первой картой, возвращаем driver/wait
+		success, driver, wait = attempt_registration(1, 0, first_order, return_driver=True)
+		if success:
+			return True
+		
+		print("❌ Первая карта не прошла, пробуем остальные на месте...")
+		
+		# Если первая карта не прошла, пробуем остальные карты на той же странице
+		for i, order_data in enumerate(order_data_list[1:], 1):
+			print(f"\n🔄 Пробуем карту #{i+1}: {order_data['card_number']}")
+			
+			# Меняем только данные карты на месте
+			card_changed = change_card_data_only(driver, wait, order_data)
+			if card_changed:
+				# Нажимаем Place Order с новой картой
+				try:
+					place_order_locators = [
+						(By.XPATH, "//button[@data-testid='complete-purchase']")
+					]
+					
+					if click_safely(driver, wait, place_order_locators, name="place-order-button"):
+						print("✅ Place Order нажат с новой картой")
+						time.sleep(25)  # Ждём обработку платежа
+						
+						# Проверяем успех
+						try:
+							order_status_link = wait.until(
+								EC.presence_of_element_located(
+									(By.XPATH, "//a[contains(@href, 'orderstatus.whoop.com')]"))).get_attribute(
+								"href")
+							print("🎉 Карта прошла!")
+							return True
+						except:
+							print("❌ Карта не прошла, пробуем следующую")
+							continue
+					else:
+						print("❌ Не удалось нажать Place Order")
+						continue
+				except Exception as e:
+					print(f"❌ Ошибка при обработке карты: {e}")
+					continue
+			else:
+				print("❌ Не удалось изменить данные карты")
+				continue
+		
+		# Закрываем браузер
+		try:
+			driver.quit()
+		except:
+			pass
+		return False
+		
+	except Exception as e:
+		print(f"❌ Ошибка в run_registration_with_card_retry: {e}")
 		return False
 
 def run_flow(card_index: int | None = None) -> None:

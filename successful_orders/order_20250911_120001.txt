@@ -1,0 +1,30 @@
+=== УСПЕШНЫЙ ЗАКАЗ WHOOP ===
+Дата и время: 2025-09-11 12:00:01
+==================================================
+
+ДАННЫЕ АККАУНТА:
+Email: wLHSAhmedAl-Sheikh87uvBw@gmail.com
+Пароль: nFbkpEiBb7seUp
+
+ДАННЫЕ ДОСТАВКИ:
+Имя: Ahmed
+Фамилия: Al-Sheikh
+Адрес: __Princess__Tower__
+Город: Dubai
+Область: Dubai Marina
+Телефон: 504821637
+
+ДАННЫЕ КАРТЫ:
+Номер карты: 5573770014381754
+Срок действия: 09/30
+CVC: 519
+Имя на карте: Ahmed Al-Sheikh
+
+ДОПОЛНИТЕЛЬНЫЕ ДЕТАЛИ:
+order_status_link: https://orderstatus.whoop.com/?stripe=ch_3S67H9HLc4GztXOm1PaU5v11&email=wLHSAhmedAl-Sheikh87uvBw@gmail.com
+order_number: ORDER NUMBER
+B50856552
+ORDER DATE
+September 11, 2025
+payment_status: SUCCESS
+transaction_time: 2025-09-11 12:00:01

@@ -1,7 +1,7 @@
 {
   "profiles": [
     {
-      "name": "Profil-Dubai-16",
+      "name": "Profil-Dubai-01",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "name": "Profil-Dubai-17",
+      "name": "Profil-Dubai-02",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -25,34 +25,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".mailchimp.ae",
-          "name": "mailchimp_session",
-          "value": "mailchimp_session_123bcd",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".hubspot.ae",
-          "name": "hubspot_token",
-          "value": "hubspot_token_456efg",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".salesforce.ae",
-          "name": "salesforce_session",
-          "value": "salesforce_session_789hij",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-18",
+      "name": "Profil-Dubai-03",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -62,34 +39,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".google.ae",
-          "name": "NID",
-          "value": "197=Yh8xGkPq3sZ9XaC7bJrLmNw0uVt2rFd4p6yOzQ1cTbM",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".bing.ae",
-          "name": "bing_session",
-          "value": "bing_session_123klm",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".duckduckgo.ae",
-          "name": "ddg_token",
-          "value": "duckduckgo_token_456nop",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-19",
+      "name": "Profil-Dubai-04",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -99,34 +53,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".wikipedia.ae",
-          "name": "wiki_session",
-          "value": "wikipedia_session_123qrs",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".quora.ae",
-          "name": "quora_token",
-          "value": "quora_token_456tuv",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".yahoo.ae",
-          "name": "yahoo_session",
-          "value": "yahoo_session_789wxy",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-20",
+      "name": "Profil-Dubai-05",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -136,34 +67,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".ebay.ae",
-          "name": "ebay_session",
-          "value": "ebay_session_123zab",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".aliexpress.ae",
-          "name": "aliexpress_token",
-          "value": "aliexpress_token_456cde",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".noon.ae",
-          "name": "noon_session",
-          "value": "noon_session_789fgh",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-17",
+      "name": "Profil-Dubai-06",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -173,34 +81,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_124stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_457vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_790yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-18",
+      "name": "Profil-Dubai-07",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -210,34 +95,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_125stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_458vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_791yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-19",
+      "name": "Profil-Dubai-08",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -247,34 +109,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_126stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_459vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_792yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-20",
+      "name": "Profil-Dubai-09",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -284,34 +123,11 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_127stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_460vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_793yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     },
     {
-      "name": "Profil-Dubai-21",
+      "name": "Profil-Dubai-10",
       "proxy": {
         "proxy_type": "noproxy",
         "proxy_host": "",
@@ -321,215 +137,7 @@
         "proxy_soft": "other"
       },
       "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_128stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_461vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_794yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
-      ]
-    },
-    {
-      "name": "Profil-Dubai-22",
-      "proxy": {
-        "proxy_type": "noproxy",
-        "proxy_host": "",
-        "proxy_port": "",
-        "proxy_username": "",
-        "proxy_password": "",
-        "proxy_soft": "other"
-      },
-      "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_129stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_462vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_795yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
-      ]
-    },
-    {
-      "name": "Profil-Dubai-23",
-      "proxy": {
-        "proxy_type": "noproxy",
-        "proxy_host": "",
-        "proxy_port": "",
-        "proxy_username": "",
-        "proxy_password": "",
-        "proxy_soft": "other"
-      },
-      "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_130stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_463vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_796yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
-      ]
-    },
-    {
-      "name": "Profil-Dubai-24",
-      "proxy": {
-        "proxy_type": "noproxy",
-        "proxy_host": "",
-        "proxy_port": "",
-        "proxy_username": "",
-        "proxy_password": "",
-        "proxy_soft": "other"
-      },
-      "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_131stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_464vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_797yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
-      ]
-    },
-    {
-      "name": "Profil-Dubai-25",
-      "proxy": {
-        "proxy_type": "noproxy",
-        "proxy_host": "",
-        "proxy_port": "",
-        "proxy_username": "",
-        "proxy_password": "",
-        "proxy_soft": "other"
-      },
-      "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_132stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_465vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_798yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
-      ]
-    },
-    {
-      "name": "Profil-Dubai-26",
-      "proxy": {
-        "proxy_type": "noproxy",
-        "proxy_host": "",
-        "proxy_port": "",
-        "proxy_username": "",
-        "proxy_password": "",
-        "proxy_soft": "other"
-      },
-      "cookies": [
-        {
-          "domain": ".trello.ae",
-          "name": "trello_session",
-          "value": "trello_session_133stu",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".asana.ae",
-          "name": "asana_token",
-          "value": "asana_token_466vwx",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        },
-        {
-          "domain": ".notion.ae",
-          "name": "notion_session",
-          "value": "notion_session_799yza",
-          "secure": true,
-          "httpOnly": true,
-          "path": "/"
-        }
+        
       ]
     }
   ]
