@@ -9,6 +9,7 @@ import requests
 import json
 import random
 import secrets
+import os
 
 
 def get_random_browser():
@@ -103,6 +104,73 @@ def generate_realistic_mac_address():
     return mac_address
 
 
+def get_adspower_api_url():
+    """Автоматически определяет URL API AdsPower"""
+    # Проверяем переменную окружения для ручного указания порта
+    manual_port = os.environ.get('ADSPOWER_PORT')
+    if manual_port:
+        try:
+            port = int(manual_port)
+            api_url = f"http://127.0.0.1:{port}"
+            response = requests.get(f"{api_url}/api/v1/user/list", timeout=2)
+            if response.status_code == 200:
+                print(f"✅ Используем порт из переменной окружения: {port}")
+                return api_url
+            else:
+                print(f"⚠️ Порт {port} из переменной окружения недоступен")
+        except:
+            print(f"⚠️ Неверный порт в переменной окружения: {manual_port}")
+    
+    # Расширенный список возможных портов AdsPower
+    possible_ports = [
+        # Стандартные порты
+        50325, 50326, 50327, 50328, 50329,
+        # Альтернативные порты
+        50330, 50331, 50332, 50333, 50334, 50335,
+        # Другие возможные порты
+        50320, 50321, 50322, 50323, 50324,
+        50336, 50337, 50338, 50339, 50340,
+        # Пользовательские порты (если кто-то изменил)
+        50300, 50301, 50302, 50303, 50304, 50305,
+        50310, 50311, 50312, 50313, 50314, 50315
+    ]
+    
+    print("🔍 Ищу AdsPower API...")
+    
+    for port in possible_ports:
+        api_url = f"http://127.0.0.1:{port}"
+        try:
+            # Проверяем доступность API
+            response = requests.get(f"{api_url}/api/v1/user/list", timeout=1)
+            if response.status_code == 200:
+                print(f"✅ Найден AdsPower API на порту {port}")
+                return api_url
+        except:
+            continue
+    
+    # Если не найден, пробуем сканировать диапазон портов
+    print("🔍 Сканирую диапазон портов 50300-50400...")
+    for port in range(50300, 50401):
+        api_url = f"http://127.0.0.1:{port}"
+        try:
+            response = requests.get(f"{api_url}/api/v1/user/list", timeout=0.5)
+            if response.status_code == 200:
+                print(f"✅ Найден AdsPower API на порту {port}")
+                return api_url
+        except:
+            continue
+    
+    # Если все еще не найден, просим пользователя указать порт
+    print("❌ AdsPower API не найден автоматически!")
+    print("💡 Возможные решения:")
+    print("   1. Убедитесь, что AdsPower запущен")
+    print("   2. Проверьте, что API включен в настройках")
+    print("   3. Укажите порт вручную в коде")
+    
+    # Возвращаем стандартный порт как fallback
+    return "http://127.0.0.1:50325"
+
+
 def load_config():
     """Загружает настройки из config.json"""
     try:
@@ -115,7 +183,7 @@ def load_config():
 
 def list_proxies():
     """Получает список всех прокси из AdsPower"""
-    api_url = "http://127.0.0.1:50325"
+    api_url = get_adspower_api_url()
     
     # Данные для запроса (пустой body для получения всех прокси)
     request_data = {}
@@ -161,8 +229,8 @@ def create_profile(proxy_index=None):
     # Берем первый профиль из конфига
     profile_config = config["profiles"][0]
     
-    # URL API AdsPower
-    api_url = "http://127.0.0.1:50325"
+    # URL API AdsPower (автоматическое определение порта)
+    api_url = get_adspower_api_url()
     
     # Получаем список прокси
     print("🔍 Получаю список прокси из AdsPower...")
@@ -250,7 +318,23 @@ def create_profile(proxy_index=None):
             # Настройки масштабирования для правильного отображения
             "device_scale_factor": "1",  # Масштаб устройства (1 = 100%)
             "pixel_ratio": "1",  # Соотношение пикселей
-            "zoom_level": "0"  # Уровень масштабирования (0 = 100%)
+            "zoom_level": "0",  # Уровень масштабирования (0 = 100%)
+            
+            # WebGL Vendor для реалистичности
+            "webgl_vendor": random.choice([
+                "Google Inc. (Intel)",
+                "Google Inc. (NVIDIA Corporation)",
+                "Google Inc. (AMD)",
+                "Google Inc. (Intel Inc.)"
+            ]),
+            
+            # WebGL Renderer для реалистичности
+            "webgl_renderer": random.choice([
+                "ANGLE (Intel, Intel(R) UHD Graphics 620 Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.8336)",
+                "ANGLE (NVIDIA, NVIDIA GeForce GTX 1060 Direct3D11 vs_5_0 ps_5_0, D3D11-30.0.14.7111)",
+                "ANGLE (AMD, AMD Radeon RX 580 Direct3D11 vs_5_0 ps_5_0, D3D11-30.0.14.7111)",
+                "ANGLE (Intel, Intel(R) Iris Xe Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-30.0.14.7111)"
+            ])
         }
     }
     
@@ -290,7 +374,7 @@ def create_profile(proxy_index=None):
 
 def start_browser(user_id):
     """Запускает браузер для профиля и возвращает WebDriver данные"""
-    api_url = "http://127.0.0.1:50325"
+    api_url = get_adspower_api_url()
     
     # Данные для запуска браузера (API v2)
     browser_data = {
@@ -347,7 +431,7 @@ def start_browser(user_id):
 
 def stop_browser(user_id):
     """Останавливает браузер профиля"""
-    api_url = "http://127.0.0.1:50325"
+    api_url = get_adspower_api_url()
     
     # Данные для остановки браузера (API v2)
     browser_data = {

@@ -4623,3 +4623,147 @@ September 11, 2025
 [2025-09-11 16:05:20] [DEBUG] Saved whoop_error_page.html
 
 [2025-09-11 16:05:21] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-17 19:41:56] Используем данные: kQUFMohammedAl-Rashid22iIzf@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 19:44:28] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-17 19:44:56] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-17 19:45:21] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-17 19:45:57] Email: kQUFMohammedAl-Rashid22iIzf@gmail.com
+
+[2025-09-17 19:46:08] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-17 19:47:03] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-17 19:48:41] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-17 19:48:41] Кнопка Place Order нажата
+
+[2025-09-17 19:49:06] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573770014543221
+
+[2025-09-17 19:49:17] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573770014543221
+
+[2025-09-17 19:49:25] Используем данные: kQUFMohammedAl-Rashid22iIzf@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 19:51:28] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-17 19:51:56] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-17 19:52:21] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-17 19:53:01] Email: kQUFMohammedAl-Rashid22iIzf@gmail.com
+
+[2025-09-17 19:53:18] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-17 19:54:17] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-17 19:55:54] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-17 19:55:54] Кнопка Place Order нажата
+
+[2025-09-17 19:56:19] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573770014543221
+
+[2025-09-17 19:56:29] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573770014543221
+
+[2025-09-17 19:58:06] Используем данные: lFDVMohammedAl-Rashid74sGOE@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 20:02:10] Используем данные: yBIhMohammedAl-Rashid76sFAv@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 20:06:06] Используем данные: kweKMohammedAl-Rashid99soUL@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 20:09:43] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-17 20:10:12] [DEBUG] Try click trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): displayed=True enabled=True attrs=id= name= data-testid=trial-membership aria-disabled=None disabled=None
+
+[2025-09-17 20:10:37] [DEBUG] Try click checkout-button via ('xpath', "//button[@data-testid='cart-continueButton']"): displayed=True enabled=True attrs=id= name= data-testid=cart-continueButton aria-disabled=None disabled=None
+
+[2025-09-17 20:11:17] Email: kweKMohammedAl-Rashid99soUL@gmail.com
+
+[2025-09-17 20:11:40] [DEBUG] Try click next-button via ('xpath', "//button[@data-testid='next-button-create-account']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-create-account aria-disabled=None disabled=None
+
+[2025-09-17 20:13:07] [DEBUG] Try click next-address-button via ('xpath', "//button[@data-testid='next-button-shipping-address']"): displayed=True enabled=True attrs=id= name= data-testid=next-button-shipping-address aria-disabled=None disabled=None
+
+[2025-09-17 20:15:03] [DEBUG] Try click place-order-button via ('xpath', "//button[@data-testid='complete-purchase']"): displayed=True enabled=True attrs=id= name= data-testid=complete-purchase aria-disabled=None disabled=None
+
+[2025-09-17 20:15:03] Кнопка Place Order нажата
+
+[2025-09-17 20:15:28] [UNSUCCESSFUL] Ошибка при оплате: Unable to process checkout, Карта: 5573770014543221
+
+[2025-09-17 20:15:38] [UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: 5573770014543221
+
+[2025-09-17 20:15:47] Используем данные: kweKMohammedAl-Rashid99soUL@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 20:17:48] [DEBUG] Try click continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): displayed=True enabled=True attrs=id= name= data-testid=None aria-disabled=None disabled=None
+
+[2025-09-17 20:18:23] [DEBUG] Locator not clickable trial-membership via ('xpath', "//button[@data-testid='trial-membership']"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff71bc60935]
+	(No symbol) [0x0x7ff71bc608f0]
+	(No symbol) [0x0x7ff71bfa15da]
+	(No symbol) [0x0x7ff71bff86a3]
+	(No symbol) [0x0x7ff71bff887c]
+	(No symbol) [0x0x7ff71c047bc7]
+	(No symbol) [0x0x7ff71c0217cf]
+	(No symbol) [0x0x7ff71bfeaedc]
+	(No symbol) [0x0x7ff71c04491c]
+	(No symbol) [0x0x7ff71c021583]
+	(No symbol) [0x0x7ff71bfea29e]
+	(No symbol) [0x0x7ff71bfe91d8]
+	(No symbol) [0x0x7ff71bfe9f9a]
+	GetHandleVerifier [0x0x7ff71c5d0436+4602630]
+	(No symbol) [0x0x7ff71bc44981]
+	GetHandleVerifier [0x0x7ff71c3f1964+2641972]
+	GetHandleVerifier [0x0x7ff71c5794ca+4246426]
+	GetHandleVerifier [0x0x7ff71c25248a+940890]
+	(No symbol) [0x0x7ff71be12d7e]
+	(No symbol) [0x0x7ff71be12c84]
+	(No symbol) [0x0x7ff71bc66649]
+	(No symbol) [0x0x7ff71bd059c8]
+	BaseThreadInitThunk [0x0x7ff9109fe8d7+23]
+	RtlUserThreadStart [0x0x7ff911fc8d9c+44]
+
+
+[2025-09-17 20:18:24] [DEBUG] Saved artifacts: whoop_locator_unavailable_trial-membership_20250917_201823.html, whoop_locator_unavailable_trial-membership_20250917_201823.png
+
+[2025-09-17 20:18:25] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-17 20:18:25] [DEBUG] Saved whoop_error_page.png
+
+[2025-09-17 20:18:34] Используем данные: kweKMohammedAl-Rashid99soUL@gmail.com - Mohammed Al-Rashid
+
+[2025-09-17 20:21:42] [DEBUG] Locator not clickable continue-button via ('xpath', "//button[contains(text(), 'Continue')]"): Message: 
+Stacktrace:
+	(No symbol) [0x0x7ff71bc60935]
+	(No symbol) [0x0x7ff71bc608f0]
+	(No symbol) [0x0x7ff71bfa15da]
+	(No symbol) [0x0x7ff71bff86a3]
+	(No symbol) [0x0x7ff71bff887c]
+	(No symbol) [0x0x7ff71c047bc7]
+	(No symbol) [0x0x7ff71c0217cf]
+	(No symbol) [0x0x7ff71bfeaedc]
+	(No symbol) [0x0x7ff71c04491c]
+	(No symbol) [0x0x7ff71c021583]
+	(No symbol) [0x0x7ff71bfea29e]
+	(No symbol) [0x0x7ff71bfe91d8]
+	(No symbol) [0x0x7ff71bfe9f9a]
+	GetHandleVerifier [0x0x7ff71c5d0436+4602630]
+	(No symbol) [0x0x7ff71bc44981]
+	GetHandleVerifier [0x0x7ff71c3f1964+2641972]
+	GetHandleVerifier [0x0x7ff71c5794ca+4246426]
+	GetHandleVerifier [0x0x7ff71c25248a+940890]
+	(No symbol) [0x0x7ff71be12d7e]
+	(No symbol) [0x0x7ff71be12c84]
+	(No symbol) [0x0x7ff71bc66649]
+	(No symbol) [0x0x7ff71bd059c8]
+	BaseThreadInitThunk [0x0x7ff9109fe8d7+23]
+	RtlUserThreadStart [0x0x7ff911fc8d9c+44]
+
+
+[2025-09-17 20:21:43] [DEBUG] Saved artifacts: whoop_locator_unavailable_continue-button_20250917_202142.html, whoop_locator_unavailable_continue-button_20250917_202142.png
+
+[2025-09-17 20:21:43] [DEBUG] Saved whoop_error_page.html
+
+[2025-09-17 20:21:43] [DEBUG] Saved whoop_error_page.png

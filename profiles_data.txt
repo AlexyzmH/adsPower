@@ -1,0 +1,129 @@
+=== ДАННЫЕ ДЛЯ 10 ПРОФИЛЕЙ ===
+
+ПРОФИЛЬ 1:
+Имя: Khalid
+Фамилия: Al-Sabah
+Email: x7khalid.alsabah9m@gmail.com
+Пароль: Khalid2024!
+Карта: 5573770014194298
+CVV: 699
+Срок: 09/30
+Телефон: 552468135
+Адрес: Princess Tower
+Адрес2: 42 floor, rm 4208
+
+ПРОФИЛЬ 2:
+Имя: Khaled
+Фамилия: Al-Sabah
+Email: k3khaled.alsabah2p@yahoo.com
+Пароль: Khaled2024!
+Карта: 5573770014194298
+CVV: 699
+Срок: 09/30
+Телефон: 505512616
+Адрес: Princess=>Tower
+Адрес2: 42 floor, room 4208
+
+ПРОФИЛЬ 3:
+Имя: Khalil
+Фамилия: Al-Sabah
+Email: m8khalil.alsabah4q@gmail.com
+Пароль: Khalil2024!
+Карта: 5573770014194298
+CVV: 699
+Срок: 09/30
+Телефон: 506172218
+Адрес: Princess::Tower
+Адрес2: 42 floor, charge 4208
+
+ПРОФИЛЬ 4:
+Имя: Aisha
+Фамилия: Al-Maktoum
+Email: n5aisha.almaktoum7r@yahoo.com
+Пароль: Aisha2024!
+Карта: 5573770014199685
+CVV: 076
+Срок: 09/30
+Телефон: 542891456
+Адрес: Princess-Tower
+Адрес2: 42-floor-rm-4208
+
+ПРОФИЛЬ 5:
+Имя: Aysha
+Фамилия: Al-Maktoum
+Email: b9aysha.almaktoum3s@gmail.com
+Пароль: Aysha2024!
+Карта: 5573770014199685
+CVV: 076
+Срок: 09/30
+Телефон: 558234791
+Адрес: Princess/Tower
+Адрес2: 42/floor/room/4208
+
+ПРОФИЛЬ 6:
+Имя: Ayesha
+Фамилия: Al-Maktoum
+Email: c2ayesha.almaktoum6t@yahoo.com
+Пароль: Ayesha2024!
+Карта: 5573770014199685
+CVV: 076
+Срок: 09/30
+Телефон: 504567823
+Адрес: Princess_Tower
+Адрес2: 42::floor::charge::4208
+
+ПРОФИЛЬ 7:
+Имя: Hassan
+Фамилия: Al-Nahyan
+Email: d4hassan.alnahyan8u@gmail.com
+Пароль: Hassan2024!
+Карта: 5573770014157774
+CVV: 209
+Срок: 09/30
+Телефон: 562345678
+Адрес: Princess--Tower
+Адрес2: 42=>floor=>rm=>4208
+
+ПРОФИЛЬ 8:
+Имя: Hasan
+Фамилия: Al-Nahyan
+Email: e6hasan.alnahyan1v@yahoo.com
+Пароль: Hasan2024!
+Карта: 5573770014157774
+CVV: 209
+Срок: 09/30
+Телефон: 502987654
+Адрес: Princess>>Tower
+Адрес2: 42--floor--room--4208
+
+ПРОФИЛЬ 9:
+Имя: Hussein
+Фамилия: Al-Nahyan
+Email: f8hussein.alnahyan5w@gmail.com
+Пароль: Hussein2024!
+Карта: 5573770014157774
+CVV: 209
+Срок: 09/30
+Телефон: 544123987
+Адрес: Princess..Tower
+Адрес2: 42..floor..charge..4208
+
+ПРОФИЛЬ 10:
+Имя: Mohammed
+Фамилия: Al-Rashid
+Email: g1mohammed.alrashid9x@yahoo.com
+Пароль: Mohammed2024!
+Карта: 5573770014194298
+CVV: 699
+Срок: 09/30
+Телефон: 552468135
+Адрес: Princess Tower
+Адрес2: 42 floor, rm 4208
+
+=== ОБЩАЯ ИНФОРМАЦИЯ ===
+Город: Dubai
+Провинция: Dubai Marina
+Всего профилей: 10
+Карт используется: 3
+Уникальных адресов: 9
+Уникальных телефонов: 9
