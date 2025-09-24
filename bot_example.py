@@ -445,7 +445,7 @@ def click_safely(driver, wait, locators, name: str = "button"):
 
 
 # Функция выполнения регистрации
-def attempt_registration(reg_num, attempt=0, order_data=None, return_driver=False):
+def attempt_registration(reg_num, attempt=0, order_data=None, return_driver=False, second_card_data=None):
 	if order_data:
 		user_data = order_data
 	else:
@@ -471,6 +471,12 @@ def attempt_registration(reg_num, attempt=0, order_data=None, return_driver=Fals
 		print("❌ Не удалось получить debug port от AdsPower!")
 		return False
 	
+	print(f"🔗 Подключаемся к браузеру на порту: {debug_port}")
+	
+	# Ждем пока браузер полностью загрузится
+	print("⏳ Ждем 5 секунд для полной загрузки браузера...")
+	time.sleep(5)
+	
 	options = webdriver.ChromeOptions()
 	# Подключаемся к удаленному браузеру AdsPower
 	options.add_experimental_option("debuggerAddress", f"127.0.0.1:{debug_port}")
@@ -484,17 +490,48 @@ def attempt_registration(reg_num, attempt=0, order_data=None, return_driver=Fals
 	# Получаем путь к WebDriver от AdsPower
 	webdriver_path = get_adspower_webdriver_path()
 	
-	if webdriver_path:
-		print(f"🔧 Использую WebDriver от AdsPower: {webdriver_path}")
-		from selenium.webdriver.chrome.service import Service as ChromeService
-		service = ChromeService(executable_path=webdriver_path)
-		driver = webdriver.Chrome(service=service, options=options)
-	else:
-		print("⚠️ WebDriver от AdsPower не найден, используем автоматический")
-		from selenium.webdriver.chrome.service import Service as ChromeService
-		from webdriver_manager.chrome import ChromeDriverManager
-		service = ChromeService(ChromeDriverManager().install())
-		driver = webdriver.Chrome(service=service, options=options)
+	# Пробуем подключиться несколько раз
+	max_attempts = 3
+	for attempt in range(max_attempts):
+		try:
+			print(f"🔄 Попытка подключения #{attempt + 1}/{max_attempts}")
+			
+			if webdriver_path:
+				print(f"🔧 Использую WebDriver от AdsPower: {webdriver_path}")
+				from selenium.webdriver.chrome.service import Service as ChromeService
+				service = ChromeService(executable_path=webdriver_path)
+				driver = webdriver.Chrome(service=service, options=options)
+			else:
+				print("⚠️ WebDriver от AdsPower не найден, используем автоматический")
+				from selenium.webdriver.chrome.service import Service as ChromeService
+				from webdriver_manager.chrome import ChromeDriverManager
+				service = ChromeService(ChromeDriverManager().install())
+				driver = webdriver.Chrome(service=service, options=options)
+			
+			print("✅ WebDriver подключен успешно!")
+			
+			# Проверяем что браузер готов к работе
+			try:
+				driver.current_url
+				print("✅ Браузер готов к работе!")
+				break
+			except Exception as e:
+				print(f"⚠️ Браузер подключен, но не готов: {e}")
+				if attempt < max_attempts - 1:
+					print("⏳ Ждем еще 2 секунды...")
+					time.sleep(2)
+				else:
+					print("❌ Браузер не готов к работе!")
+					return False
+			
+		except Exception as e:
+			print(f"❌ Попытка #{attempt + 1} не удалась: {e}")
+			if attempt < max_attempts - 1:
+				print("⏳ Ждем 3 секунды перед следующей попыткой...")
+				time.sleep(3)
+			else:
+				print("❌ Все попытки подключения исчерпаны!")
+				return False
 	wait = WebDriverWait(driver, 10)
 
 	try:
@@ -1070,6 +1107,144 @@ def attempt_registration(reg_num, attempt=0, order_data=None, return_driver=Fals
 
 		except Exception:
 			log_message(f"[UNSUCCESSFUL]Ошибка: Регистрация не прошла. Карта: {user_data['card_number']}")
+			
+			# Если есть данные второй карты, пробуем её
+			if second_card_data:
+				print("🔄 Первая карта не прошла, пробуем вторую карту...")
+				log_message(f"Пробуем вторую карту: {second_card_data['card_number']}")
+				
+				# Меняем данные карты на месте
+				card_changed = change_card_data_only(driver, wait, second_card_data)
+				if card_changed:
+					# Нажимаем Place Order с новой картой
+					try:
+						place_order_locators = [
+							(By.XPATH, "//button[@data-testid='complete-purchase']")
+						]
+						
+						if click_safely(driver, wait, place_order_locators, name="place-order-button"):
+							print("✅ Place Order нажат с второй картой")
+							time.sleep(25)  # Ждём обработку платежа
+							
+							# Проверяем успех второй карты
+							try:
+								order_status_link = wait.until(
+									EC.presence_of_element_located(
+										(By.XPATH, "//a[contains(@href, 'orderstatus.whoop.com')]"))).get_attribute(
+									"href")
+								log_message(f"[SUCCESSFUL]Вторая карта прошла!Email: {user_data['email']}, Pass:{user_data['password']}, Карта: {second_card_data['card_number']}, Ссылка на заказ: {order_status_link}")
+								
+								# Сохраняем успешную регистрацию с данными второй карты
+								user_data_with_second_card = user_data.copy()
+								user_data_with_second_card['card_number'] = second_card_data['card_number']
+								user_data_with_second_card['card_expiry'] = second_card_data['card_expiry']
+								user_data_with_second_card['card_cvc'] = second_card_data['card_cvc']
+								user_data_with_second_card['card_name'] = second_card_data['card_name']
+								
+								save_successful_registration(user_data_with_second_card, order_status_link)
+								
+								# Сохраняем успешный заказ в отдельную папку
+								order_details = {
+									"order_status_link": order_status_link,
+									"payment_status": "SUCCESS",
+									"transaction_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+								}
+								save_successful_order(user_data_with_second_card, order_details)
+								
+								# Переходим на страницу заказа
+								print("-------Переходим на страницу заказа...25 сек-------")
+								driver.get(order_status_link)
+								time.sleep(20)
+								
+								# Ищем номер заказа
+								print("-------Ищем номер заказа...-------")
+								order_number_element = None
+								
+								# Пробуем сначала найти по классу
+								try:
+									order_number_element = WebDriverWait(driver, 10).until(
+										EC.presence_of_element_located((By.CLASS_NAME, "gpSbjZ"))
+									)
+								except:
+									pass
+								
+								# Если не нашли по классу, ищем по тексту
+								if not order_number_element:
+									try:
+										order_number_element = WebDriverWait(driver, 10).until(
+											EC.presence_of_element_located((By.XPATH, "//div[contains(text(), 'Order number:')]"))
+										)
+									except:
+										pass
+								
+								# Если номер заказа не найден, пробуем кликнуть Детали
+								if not order_number_element:
+									print("Номер заказа не найден, пробуем нажать Детали...")
+									try:
+										quittung_button = wait.until(
+											EC.element_to_be_clickable((By.XPATH, "//a[@data-test-id='view-order-details']"))
+										)
+										quittung_button.click()
+										time.sleep(10)
+										
+										print("-------Пробуем найти номер заказа в новом блоке...-------")
+										order_number_element = wait.until(
+											EC.presence_of_element_located((By.CLASS_NAME, "order-details_shipItem__ln8a9"))
+										)
+									except:
+										pass
+								
+								# Если нашли, логируем и обновляем данные
+								if order_number_element:
+									order_number = order_number_element.text.split(":")[-1].strip()
+									log_message(f"[SUCCESSFUL]Номер заказа: {order_number}")
+									# Обновляем данные успешной регистрации с номером заказа
+									save_successful_registration(user_data_with_second_card, order_status_link, order_number)
+									
+									# Обновляем файл заказа с номером заказа
+									order_details = {
+										"order_status_link": order_status_link,
+										"order_number": order_number,
+										"payment_status": "SUCCESS",
+										"transaction_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+									}
+									save_successful_order(user_data_with_second_card, order_details)
+								else:
+									print("Номер заказа не найден! Сохраняем HTML для отладки.")
+									page_source = driver.page_source
+									with open("whoop_order_status.html", "w", encoding="utf-8") as f:
+										f.write(page_source)
+									log_message(f"[BUT]: номер заказа не найден!")
+								
+								log_message(f"Регистрация #{reg_num + 1} завершена для {user_data['email']} (вторая карта)")
+								if return_driver:
+									return True, driver, wait  # Успешная регистрация + driver/wait
+								return True  # Успешная регистрация
+								
+							except Exception as e2:
+								log_message(f"[UNSUCCESSFUL]Вторая карта тоже не прошла: {e2}")
+								if return_driver:
+									return False, driver, wait  # Неудачная регистрация + driver/wait
+								return False  # Неудачная регистрация
+						else:
+							print("❌ Не удалось нажать Place Order с второй картой")
+							if return_driver:
+								return False, driver, wait  # Неудачная регистрация + driver/wait
+							return False  # Неудачная регистрация
+							
+					except Exception as e2:
+						print(f"❌ Ошибка при попытке с второй картой: {e2}")
+						if return_driver:
+							return False, driver, wait  # Неудачная регистрация + driver/wait
+						return False  # Неудачная регистрация
+				else:
+					print("❌ Не удалось изменить данные карты")
+					if return_driver:
+						return False, driver, wait  # Неудачная регистрация + driver/wait
+					return False  # Неудачная регистрация
+			
+			if return_driver:
+				return False, driver, wait  # Неудачная регистрация + driver/wait
 			return False  # Неудачная регистрация
 
 		log_message(f"Регистрация #{reg_num + 1} завершена для {user_data['email']}")
@@ -1137,20 +1312,26 @@ def change_card_data_only(driver, wait, order_data):
 		# Меняем данные карты
 		driver.switch_to.frame(iframes[iframe_index])
 
+		# Очищаем и вводим номер карты (точно как в первой попытке)
 		card_number_field = wait.until(EC.presence_of_element_located((By.NAME, "cardnumber")))
-		card_number_field.clear()
+		human_mouse_movement(driver, card_number_field)
 		human_type(card_number_field, order_data["card_number"])
-		print("Ввел новый номер карты")
+		print(f"✅ Ввел новый номер карты: {order_data['card_number']}")
+		human_pause(0.5, 1.0)
 
+		# Очищаем и вводим срок действия (точно как в первой попытке)
 		exp_date_field = wait.until(EC.presence_of_element_located((By.NAME, "exp-date")))
-		exp_date_field.clear()
+		human_mouse_movement(driver, exp_date_field)
 		human_type(exp_date_field, order_data["card_expiry"])
-		print("Ввел новый срок действия")
+		print(f"✅ Ввел новый срок действия: {order_data['card_expiry']}")
+		human_pause(0.5, 1.0)
 
+		# Очищаем и вводим CVC (точно как в первой попытке)
 		cvc_field = wait.until(EC.presence_of_element_located((By.NAME, "cvc")))
-		cvc_field.clear()
+		human_mouse_movement(driver, cvc_field)
 		human_type(cvc_field, order_data["card_cvc"])
-		print("Ввел новый CVC")
+		print(f"✅ Ввел новый CVC: {order_data['card_cvc']}")
+		human_pause(0.5, 1.0)
 
 		driver.switch_to.default_content()
 		return True

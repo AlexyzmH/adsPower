@@ -24,10 +24,11 @@ def get_random_browser():
 
 
 def get_random_os():
-    """Возвращает случайную операционную систему из списка (только Windows и macOS)"""
+    """Возвращает случайную операционную систему из списка (только десктопные системы)"""
     operating_systems = [
-        "Windows",
-        "macOS"
+        "Windows",    # Windows 10/11
+        "macOS",      # macOS Monterey/Ventura/Sonoma
+        "Linux"       # Ubuntu/Debian/Fedora
     ]
     return random.choice(operating_systems)
 
@@ -248,6 +249,18 @@ def create_profile(proxy_index=None):
         proxy = random.choice(proxies)
         print(f"✅ Использую случайный прокси: {proxy.get('type')}://{proxy.get('host')}:{proxy.get('port')}")
     
+    # Проверяем тип прокси (может влиять на детекцию устройства)
+    proxy_type = proxy.get('type', '').lower()
+    proxy_host = proxy.get('host', '')
+    
+    print(f"🔍 АНАЛИЗ ПРОКСИ:")
+    print(f"   Тип: {proxy_type}")
+    print(f"   Хост: {proxy_host}")
+    
+    # Предупреждаем о возможных проблемах
+    if 'mobile' in proxy_host.lower() or '4g' in proxy_host.lower() or '5g' in proxy_host.lower():
+        print(f"⚠️ ВНИМАНИЕ: Прокси может быть мобильным - это может влиять на детекцию устройства!")
+    
     proxy_id = proxy.get('proxy_id')
     
     # Настройки браузера и ОС из конфига или случайные
@@ -268,6 +281,9 @@ def create_profile(proxy_index=None):
     if browser == "safari" and os != "macOS":
         print(f"⚠️ Safari несовместим с {os}, принудительно меняю на macOS")
         os = "macOS"
+    elif browser == "edge" and os == "Linux":
+        print(f"⚠️ Edge на Linux может быть нестабильным, меняю на Chrome")
+        browser = "chrome"
     
     # Генерируем реалистичную MAC-адрес
     mac_address = generate_realistic_mac_address()
@@ -275,14 +291,19 @@ def create_profile(proxy_index=None):
     print(f"🌐 Браузер: {browser}")
     print(f"💻 ОС: {os}")
     print(f"🔧 MAC-адрес: {mac_address}")
+    print(f"🔧 ПРИНУДИТЕЛЬНО: mobile=0, touch=0, device_type=desktop")
     print(f"🔧 AdsPower автоматически настроит фингерпринт для {browser} на {os}")
     
     # Данные для создания профиля
     profile_data = {
         "name": profile_config["name"],
         "group_id": "0",
-        "remark": "Создан через скрипт",
+        "remark": "Создан через скрипт (ПРИНУДИТЕЛЬНО ДЕСКТОП)",
         "proxyid": proxy_id,  # Используем ID существующего прокси
+        
+        # ПРИНУДИТЕЛЬНЫЕ настройки для предотвращения мобильных профилей
+        "device_type": "desktop",  # ПРИНУДИТЕЛЬНО: десктоп
+        "is_mobile": False,  # ПРИНУДИТЕЛЬНО: НЕ мобильное
         
         # Куки для профиля
         "cookies": profile_config.get("cookies", []),
@@ -299,10 +320,15 @@ def create_profile(proxy_index=None):
             "webgl": "3",  # Случайный WebGL metadata
             "audio": "1",
             
-            # Настройки браузера и ОС
+            # Настройки браузера и ОС (ПРИНУДИТЕЛЬНО ТОЛЬКО ДЕСКТОПНЫЕ)
             "browser": browser,  # Случайный браузер (chrome, firefox, edge, safari)
-            "os": os,  # Случайная ОС (Windows, macOS)
+            "os": os,  # ПРИНУДИТЕЛЬНО: Windows, macOS, Linux (НЕ Android!)
             "platform": os,  # Платформа (обычно совпадает с ОС)
+            
+            # Дополнительные принудительные настройки для десктопа
+            "mobile": "0",  # ПРИНУДИТЕЛЬНО: НЕ мобильное устройство
+            "touch": "0",  # ПРИНУДИТЕЛЬНО: НЕ сенсорный экран
+            "device_type": "desktop",  # ПРИНУДИТЕЛЬНО: десктопное устройство
             
             # MAC-адрес для реалистичности
             "mac_address": mac_address,  # Реалистичная MAC-адрес от настоящего железа
@@ -343,6 +369,15 @@ def create_profile(proxy_index=None):
     # Логируем куки
     cookies_count = len(profile_config.get("cookies", []))
     print(f"🍪 Добавляю {cookies_count} куки в профиль")
+    
+    # Логируем ключевые настройки фингерпринта
+    fingerprint = profile_data["fingerprint_config"]
+    print(f"🔍 ОТПРАВЛЯЕМ В ADSPOWER:")
+    print(f"   OS: {fingerprint['os']}")
+    print(f"   Platform: {fingerprint['platform']}")
+    print(f"   Mobile: {fingerprint['mobile']}")
+    print(f"   Touch: {fingerprint['touch']}")
+    print(f"   Device Type: {fingerprint['device_type']}")
     
     try:
         # Отправляем запрос на создание профиля
